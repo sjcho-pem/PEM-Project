@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1062
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H_MarsSSD", "H_MarsSSD\H_MarsSSD.csproj", "{9173C831-AE08-4B7A-9EE3-D989AA1E32C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_Ajin|Any CPU = Debug_Ajin|Any CPU
+		Debug_Ajin|x64 = Debug_Ajin|x64
+		Debug_Simul|Any CPU = Debug_Simul|Any CPU
+		Debug_Simul|x64 = Debug_Simul|x64
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release_Ajin|Any CPU = Release_Ajin|Any CPU
+		Release_Ajin|x64 = Release_Ajin|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9173C831-AE08-4B7A-9EE3-D989AA1E32C9}.Debug_Ajin|Any CPU.ActiveCfg = Debug_Ajin|Any CPU
+		{9173C831-AE08-4B7A-9EE3-D989AA1E32C9}.Debug_Ajin|Any CPU.Build.0 = Debug_Ajin|Any CPU
+		{9173C831-AE08-4B7A-9EE3-D989AA1E32C9}.Debug_Ajin|x64.ActiveCfg = Debug_Ajin|x64
+		{9173C831-AE08-4B7A-9EE3-D989AA1E32C9}.Debug_Ajin|x64.Build.0 = Debug_Ajin|x64
+		{9173C831-AE08-4B7A-9EE3-D989AA1E32C9}.Debug_Simul|Any CPU.ActiveCfg = Debug_Simul|Any CPU
+		{9173C831-AE08-4B7A-9EE3-D989AA1E32C9}.Debug_Simul|Any CPU.Build.0 = Debug_Simul|Any CPU
+		{9173C831-AE08-4B7A-9EE3-D989AA1E32C9}.Debug_Simul|x64.ActiveCfg = Debug_Simul|x64
+		{9173C831-AE08-4B7A-9EE3-D989AA1E32C9}.Debug_Simul|x64.Build.0 = Debug_Simul|x64
+		{9173C831-AE08-4B7A-9EE3-D989AA1E32C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9173C831-AE08-4B7A-9EE3-D989AA1E32C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9173C831-AE08-4B7A-9EE3-D989AA1E32C9}.Debug|x64.ActiveCfg = Debug|x64
+		{9173C831-AE08-4B7A-9EE3-D989AA1E32C9}.Debug|x64.Build.0 = Debug|x64
+		{9173C831-AE08-4B7A-9EE3-D989AA1E32C9}.Release_Ajin|Any CPU.ActiveCfg = Release_Ajin|Any CPU
+		{9173C831-AE08-4B7A-9EE3-D989AA1E32C9}.Release_Ajin|Any CPU.Build.0 = Release_Ajin|Any CPU
+		{9173C831-AE08-4B7A-9EE3-D989AA1E32C9}.Release_Ajin|x64.ActiveCfg = Release_Ajin|x64
+		{9173C831-AE08-4B7A-9EE3-D989AA1E32C9}.Release_Ajin|x64.Build.0 = Release_Ajin|x64
+		{9173C831-AE08-4B7A-9EE3-D989AA1E32C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9173C831-AE08-4B7A-9EE3-D989AA1E32C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9173C831-AE08-4B7A-9EE3-D989AA1E32C9}.Release|x64.ActiveCfg = Release|x64
+		{9173C831-AE08-4B7A-9EE3-D989AA1E32C9}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72A84D63-960F-4736-A500-C6A21FD35885}
+	EndGlobalSection
+EndGlobal

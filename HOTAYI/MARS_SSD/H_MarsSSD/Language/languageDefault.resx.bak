@@ -1,0 +1,1427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AllHome" xml:space="preserve">
+    <value>ALL HOME</value>
+  </data>
+  <data name="JogMove" xml:space="preserve">
+    <value>JOGMOVE</value>
+  </data>
+  <data name="BtmInspOff" xml:space="preserve">
+    <value>BTM INSP OFF</value>
+  </data>
+  <data name="BtmInspOn" xml:space="preserve">
+    <value>BTM INSP ON</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>CHANGE</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>COPY</value>
+  </data>
+  <data name="FilmSkip" xml:space="preserve">
+    <value>FILM SKIP</value>
+  </data>
+  <data name="FilmUse" xml:space="preserve">
+    <value>FILM USE</value>
+  </data>
+  <data name="StepMove" xml:space="preserve">
+    <value>STEP MOVE</value>
+  </data>
+  <data name="MinusJog" xml:space="preserve">
+    <value>MINUS JOG</value>
+  </data>
+  <data name="LotEnd" xml:space="preserve">
+    <value>LOT END</value>
+  </data>
+  <data name="NG" xml:space="preserve">
+    <value>NG</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="RESET" xml:space="preserve">
+    <value>RESET</value>
+  </data>
+  <data name="ResetFlowMap" xml:space="preserve">
+    <value>RESET FLOW MAP</value>
+  </data>
+  <data name="RightOff" xml:space="preserve">
+    <value>RIGHT OFF</value>
+  </data>
+  <data name="RightOn" xml:space="preserve">
+    <value>RIGHT ON</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>SAVE</value>
+  </data>
+  <data name="TopInspOff" xml:space="preserve">
+    <value>TOP INSP OFF</value>
+  </data>
+  <data name="TopInspOn" xml:space="preserve">
+    <value>TOP INSP ON</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>TOTAL</value>
+  </data>
+  <data name="Vacuum" xml:space="preserve">
+    <value>VACUUM</value>
+  </data>
+  <data name="Vacuum1" xml:space="preserve">
+    <value>VACUUM1</value>
+  </data>
+  <data name="Vacuum2" xml:space="preserve">
+    <value>VACUUM2</value>
+  </data>
+  <data name="Vacuum3" xml:space="preserve">
+    <value>VACUUM3</value>
+  </data>
+  <data name="Vacuum4" xml:space="preserve">
+    <value>VACUUM4</value>
+  </data>
+  <data name="Yield" xml:space="preserve">
+    <value>YIELD</value>
+  </data>
+  <data name="BtmInspStage" xml:space="preserve">
+    <value>BTM INSP STAGE</value>
+  </data>
+  <data name="DataModify" xml:space="preserve">
+    <value>DATA MODIFY</value>
+  </data>
+  <data name="Enable" xml:space="preserve">
+    <value>ENABLE</value>
+  </data>
+  <data name="FilmBuffer" xml:space="preserve">
+    <value>FILM BUFFER</value>
+  </data>
+  <data name="FilmPicker" xml:space="preserve">
+    <value>FILM PICKER</value>
+  </data>
+  <data name="LDPicker" xml:space="preserve">
+    <value>LD PICKER</value>
+  </data>
+  <data name="Load" xml:space="preserve">
+    <value>LOAD</value>
+  </data>
+  <data name="MotorVelocity" xml:space="preserve">
+    <value>MOTOR VELOCITY</value>
+  </data>
+  <data name="NameModify" xml:space="preserve">
+    <value>NAME MODIFY</value>
+  </data>
+  <data name="ULDNG" xml:space="preserve">
+    <value>ULD (NG)</value>
+  </data>
+  <data name="ULDOK" xml:space="preserve">
+    <value>ULD (OK)</value>
+  </data>
+  <data name="RearPicker" xml:space="preserve">
+    <value>REAR PICKER</value>
+  </data>
+  <data name="RearStage" xml:space="preserve">
+    <value>REAR STAGE</value>
+  </data>
+  <data name="Recipe" xml:space="preserve">
+    <value>RECIPE</value>
+  </data>
+  <data name="TopInspStage" xml:space="preserve">
+    <value>TOP INSP STAGE</value>
+  </data>
+  <data name="ULDPicker" xml:space="preserve">
+    <value>ULD PICKER</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>COUNT</value>
+  </data>
+  <data name="Distance" xml:space="preserve">
+    <value>DISTANCE</value>
+  </data>
+  <data name="IndexMove" xml:space="preserve">
+    <value>INDEX MOVE</value>
+  </data>
+  <data name="IndexWrite" xml:space="preserve">
+    <value>INDEX WRITE</value>
+  </data>
+  <data name="JogMode" xml:space="preserve">
+    <value>JOG MODE</value>
+  </data>
+  <data name="MinsuStep" xml:space="preserve">
+    <value>MINUS STEP</value>
+  </data>
+  <data name="MotorModify" xml:space="preserve">
+    <value>MODIFY MODE</value>
+  </data>
+  <data name="MotorMove" xml:space="preserve">
+    <value>MOTOR MOVE</value>
+  </data>
+  <data name="MotorSelect" xml:space="preserve">
+    <value>MOTOR SELECT</value>
+  </data>
+  <data name="MotorStatus" xml:space="preserve">
+    <value>MOTOR STATUS [mm/sec]</value>
+  </data>
+  <data name="PlusJog" xml:space="preserve">
+    <value>PLUS JOG</value>
+  </data>
+  <data name="PlusStep" xml:space="preserve">
+    <value>PLUS STEP</value>
+  </data>
+  <data name="Velocity" xml:space="preserve">
+    <value>VELOCITY [mm]</value>
+  </data>
+  <data name="BuzzerSelect" xml:space="preserve">
+    <value>[ BUZZER SELECT ]</value>
+  </data>
+  <data name="ErrorClear" xml:space="preserve">
+    <value>ERROR CLEAR</value>
+  </data>
+  <data name="ErrorModify" xml:space="preserve">
+    <value>MODIFY MODE</value>
+  </data>
+  <data name="ErrorUpdate" xml:space="preserve">
+    <value>ERROR UPDATE</value>
+  </data>
+  <data name="OutPutEnable" xml:space="preserve">
+    <value>OUTPUT ENABLE</value>
+  </data>
+  <data name="DateRange" xml:space="preserve">
+    <value>Date Range</value>
+  </data>
+  <data name="ErrorSummary" xml:space="preserve">
+    <value>ERROR
+SUMMARY</value>
+  </data>
+  <data name="LogClear" xml:space="preserve">
+    <value>CLEAR</value>
+  </data>
+  <data name="LogUpdate" xml:space="preserve">
+    <value>UPDATE</value>
+  </data>
+  <data name="MMILog" xml:space="preserve">
+    <value>MMI LOG</value>
+  </data>
+  <data name="SEQLog" xml:space="preserve">
+    <value>SEQ LOG</value>
+  </data>
+  <data name="TimeAnalysis" xml:space="preserve">
+    <value>TIME
+ANALTSIS</value>
+  </data>
+  <data name="CycleRun" xml:space="preserve">
+    <value>Cycle Run</value>
+  </data>
+  <data name="Initalization" xml:space="preserve">
+    <value>Initalization</value>
+  </data>
+  <data name="MB_Confirmation" xml:space="preserve">
+    <value>CONFIRMATION</value>
+  </data>
+  <data name="MB_ErrClear" xml:space="preserve">
+    <value>ERROR DATA CLEAR?</value>
+  </data>
+  <data name="MB_Error" xml:space="preserve">
+    <value>ERROR</value>
+  </data>
+  <data name="MB_IndexMove" xml:space="preserve">
+    <value>INDEX MOVE?</value>
+  </data>
+  <data name="MB_InitALL" xml:space="preserve">
+    <value>ALL Initialize?</value>
+  </data>
+  <data name="MB_InitBtmST" xml:space="preserve">
+    <value>Bottom Stage Initialize?</value>
+  </data>
+  <data name="MB_InitFMPK_X" xml:space="preserve">
+    <value>Film Picker X Initialize?</value>
+  </data>
+  <data name="MB_InitFMPK_Z" xml:space="preserve">
+    <value>Film Picker Z Initialize?</value>
+  </data>
+  <data name="MB_InitLDPK" xml:space="preserve">
+    <value>Load Picker Initialize?</value>
+  </data>
+  <data name="MB_InitLDST" xml:space="preserve">
+    <value>Load Stage Initialize?</value>
+  </data>
+  <data name="MB_InitNGST" xml:space="preserve">
+    <value>NG Stage Initialize?</value>
+  </data>
+  <data name="MB_InitOKST" xml:space="preserve">
+    <value>OK Stage Initialize?</value>
+  </data>
+  <data name="MB_InitRearPK" xml:space="preserve">
+    <value>Rear Picker Initialize?</value>
+  </data>
+  <data name="MB_InitRearST_R" xml:space="preserve">
+    <value>Rear Stage R Initialize?</value>
+  </data>
+  <data name="MB_InitRearST_Z" xml:space="preserve">
+    <value>Rear Stage Z Initialize?</value>
+  </data>
+  <data name="MB_InitTopST" xml:space="preserve">
+    <value>Top Stage Initialize?</value>
+  </data>
+  <data name="MB_InitULDPK" xml:space="preserve">
+    <value>UnLoad Picker Initialize?</value>
+  </data>
+  <data name="MB_LangEnglish" xml:space="preserve">
+    <value>Would you like to change it to English?</value>
+  </data>
+  <data name="MB_LangKorean" xml:space="preserve">
+    <value>Would you like to change it to Korean?</value>
+  </data>
+  <data name="MB_Language" xml:space="preserve">
+    <value>LANGUAGE</value>
+  </data>
+  <data name="MB_LotEnd" xml:space="preserve">
+    <value>LOT END?</value>
+  </data>
+  <data name="MB_LotNameEmpty" xml:space="preserve">
+    <value>Lot name is Empty!!</value>
+  </data>
+  <data name="MB_LotSave" xml:space="preserve">
+    <value>LOT NUMBER SAVE?</value>
+  </data>
+  <data name="MB_MCAllHome" xml:space="preserve">
+    <value>MACHINE ALL HOME?</value>
+  </data>
+  <data name="MB_MCAllRun" xml:space="preserve">
+    <value>MACHINE ALL RUN?</value>
+  </data>
+  <data name="MB_RecipeChange" xml:space="preserve">
+    <value>RECIPE CHANGE?</value>
+  </data>
+  <data name="MB_RecipeCopy" xml:space="preserve">
+    <value>RECIPE COPY?</value>
+  </data>
+  <data name="MB_ReserTopST" xml:space="preserve">
+    <value>Reset Top Insp Stage?</value>
+  </data>
+  <data name="MB_ResetBtmST" xml:space="preserve">
+    <value>Reset Bottom Insp Stage?</value>
+  </data>
+  <data name="MB_ResetFilmPicker" xml:space="preserve">
+    <value>Reset Film Picker?</value>
+  </data>
+  <data name="MB_ResetLDPicker" xml:space="preserve">
+    <value>Reset LDPicker?</value>
+  </data>
+  <data name="MB_ResetRearPicker" xml:space="preserve">
+    <value>Reset Rear Picker?</value>
+  </data>
+  <data name="MB_ResetRearST" xml:space="preserve">
+    <value>Reset Rear Stage?</value>
+  </data>
+  <data name="MB_ResetULDPicker" xml:space="preserve">
+    <value>Reset Unload Picker?</value>
+  </data>
+  <data name="MB_VacSave" xml:space="preserve">
+    <value>Picker Vacuum Save?</value>
+  </data>
+  <data name="MB_Warnning" xml:space="preserve">
+    <value>WARNNING</value>
+  </data>
+  <data name="PnP" xml:space="preserve">
+    <value>PnP</value>
+  </data>
+  <data name="VacCyl" xml:space="preserve">
+    <value>Vacuum / Cylinder</value>
+  </data>
+  <data name="InitBtmStage" xml:space="preserve">
+    <value>BTM Stage
+Home</value>
+  </data>
+  <data name="InitFilmPickerX" xml:space="preserve">
+    <value>Film Picker
+X Home</value>
+  </data>
+  <data name="InitFilmPickerZ" xml:space="preserve">
+    <value>Film Picker
+Z Home</value>
+  </data>
+  <data name="InitLDpicker" xml:space="preserve">
+    <value>Load
+Picker
+Home</value>
+  </data>
+  <data name="InitLDStage" xml:space="preserve">
+    <value>Load
+Stage
+Home</value>
+  </data>
+  <data name="InitNGStage" xml:space="preserve">
+    <value>NG Stage
+Home</value>
+  </data>
+  <data name="InitOKStage" xml:space="preserve">
+    <value>OK Stage
+Home</value>
+  </data>
+  <data name="InitRearPicker" xml:space="preserve">
+    <value>Rear
+Picker
+Home</value>
+  </data>
+  <data name="InitRearStageR" xml:space="preserve">
+    <value>Rear Stage
+R Home</value>
+  </data>
+  <data name="InitRearStageZ" xml:space="preserve">
+    <value>Rear Stage
+Z Home</value>
+  </data>
+  <data name="InitTopStage" xml:space="preserve">
+    <value>Top Stage
+Home</value>
+  </data>
+  <data name="InitULDPciker" xml:space="preserve">
+    <value>Unload
+Picker
+Home</value>
+  </data>
+  <data name="MB_BTMSTVac" xml:space="preserve">
+    <value>Bottom Stage Vacuum On/Off?</value>
+  </data>
+  <data name="MB_FilmPick" xml:space="preserve">
+    <value>Film Pick Unit Run?</value>
+  </data>
+  <data name="MB_FilmPlaceNG" xml:space="preserve">
+    <value>Film NG Place Unit Run?</value>
+  </data>
+  <data name="MB_FilmPlaceOK" xml:space="preserve">
+    <value>Film OK Place Unit Run?</value>
+  </data>
+  <data name="MB_FMPKVac" xml:space="preserve">
+    <value>Film Picker Vacuum On/Off?</value>
+  </data>
+  <data name="MB_LDPick" xml:space="preserve">
+    <value>Load Pick Unit Run?</value>
+  </data>
+  <data name="MB_LDPKCyl" xml:space="preserve">
+    <value>Load Picker Cylinder Up/Down?</value>
+  </data>
+  <data name="MB_LDPKVac" xml:space="preserve">
+    <value>Load Picker Vacuum On/Off?</value>
+  </data>
+  <data name="MB_LDPlace" xml:space="preserve">
+    <value>Load Place Unit Run?</value>
+  </data>
+  <data name="MB_RearPick" xml:space="preserve">
+    <value>Rear Pick Unit Run?</value>
+  </data>
+  <data name="MB_RearPKCyl" xml:space="preserve">
+    <value>Rear Picker Cylinder Up/Down?</value>
+  </data>
+  <data name="MB_RearPKVac" xml:space="preserve">
+    <value>Rear Picker Vacuum On/Off?</value>
+  </data>
+  <data name="MB_RearPlace" xml:space="preserve">
+    <value>Pear Place Unit Run?</value>
+  </data>
+  <data name="MB_RearStageVac" xml:space="preserve">
+    <value>Rear Stage Vacuum On/Off?</value>
+  </data>
+  <data name="MB_ResetBufferCnt" xml:space="preserve">
+    <value>Reset Film Buffer Count?</value>
+  </data>
+  <data name="MB_RunBtmSt" xml:space="preserve">
+    <value>Bottom Stage Full Cycle Run?</value>
+  </data>
+  <data name="MB_RunBtmSTInsp" xml:space="preserve">
+    <value>Bottom Stage Insp Cycle Run?</value>
+  </data>
+  <data name="MB_RunBtmSTULD" xml:space="preserve">
+    <value>Bottom Stage UnLoad Cycle Run?</value>
+  </data>
+  <data name="MB_RunFMBUFPick" xml:space="preserve">
+    <value>Film BUF Pick Cycle Run?</value>
+  </data>
+  <data name="MB_RunFMBUFPLACE" xml:space="preserve">
+    <value>Film BUF Place Cycle Run?</value>
+  </data>
+  <data name="MB_RunFMPnPNG" xml:space="preserve">
+    <value>Film NG PnP Cycle Run?</value>
+  </data>
+  <data name="MB_RunFMPnPOK" xml:space="preserve">
+    <value>Film OK PnP Cycle Run?</value>
+  </data>
+  <data name="MB_RunLDPnP" xml:space="preserve">
+    <value>Load PnP Cycle Run?</value>
+  </data>
+  <data name="MB_RunLDST" xml:space="preserve">
+    <value>Load Stage Cycle Run?</value>
+  </data>
+  <data name="MB_RunNGST" xml:space="preserve">
+    <value>Stacking NG Stage Cycle Run?</value>
+  </data>
+  <data name="MB_RunOKST" xml:space="preserve">
+    <value>Stacking OK Stage Cycle Run?</value>
+  </data>
+  <data name="MB_RunRearPnP" xml:space="preserve">
+    <value>Rear PnP Cycle Run?</value>
+  </data>
+  <data name="MB_RunRearRev" xml:space="preserve">
+    <value>Rear Reverse Cycle Run?</value>
+  </data>
+  <data name="MB_RunTopST" xml:space="preserve">
+    <value>Top Stage Full Cycle Run?</value>
+  </data>
+  <data name="MB_RunTopSTInsp" xml:space="preserve">
+    <value>Top Stage Insp Cycle Run?</value>
+  </data>
+  <data name="MB_RunTopSTRear" xml:space="preserve">
+    <value>Top Stage Rear Cycle Run?</value>
+  </data>
+  <data name="MB_RunULDPnPNG" xml:space="preserve">
+    <value>UnLoad NG PnP Cycle Run?</value>
+  </data>
+  <data name="MB_RunULDPnPOK" xml:space="preserve">
+    <value>UnLoad OK PnP Cycle Run?</value>
+  </data>
+  <data name="MB_TopSTVac" xml:space="preserve">
+    <value>Top Stage Vacuum On/Off?</value>
+  </data>
+  <data name="MB_ULDPick" xml:space="preserve">
+    <value>UnLoad Pick Unit Run?</value>
+  </data>
+  <data name="MB_ULDPKCyl" xml:space="preserve">
+    <value>UnLoad Picker Cylinder Up/Down?</value>
+  </data>
+  <data name="MB_ULDPKVac" xml:space="preserve">
+    <value>UnLoad Picker Vacuum On/Off?</value>
+  </data>
+  <data name="MB_ULDPlaceNG" xml:space="preserve">
+    <value>UnLoad NG Place Unit Run?</value>
+  </data>
+  <data name="MB_ULDPlaceOK" xml:space="preserve">
+    <value>UnLoad OK Place Unit Run?</value>
+  </data>
+  <data name="RunBtmAll" xml:space="preserve">
+    <value>Btm
+Inspection</value>
+  </data>
+  <data name="RunBtmInsp" xml:space="preserve">
+    <value>Btm Stage
+Insp Pos</value>
+  </data>
+  <data name="RunBtmULD" xml:space="preserve">
+    <value>Btm Stage
+ULD POs</value>
+  </data>
+  <data name="RunFilmPnPNG" xml:space="preserve">
+    <value>Film NG
+PnP</value>
+  </data>
+  <data name="RunFilmPnPOK" xml:space="preserve">
+    <value>Film OK
+PnP</value>
+  </data>
+  <data name="RunLoadLoading" xml:space="preserve">
+    <value>Loading
+PCB</value>
+  </data>
+  <data name="RunLoadPnP" xml:space="preserve">
+    <value>PnP PCB</value>
+  </data>
+  <data name="RunRearPnP" xml:space="preserve">
+    <value>PnP PCB</value>
+  </data>
+  <data name="RunRearRev" xml:space="preserve">
+    <value>Reverse</value>
+  </data>
+  <data name="RunTopAll" xml:space="preserve">
+    <value>Top
+Inspection</value>
+  </data>
+  <data name="RunTopInsp" xml:space="preserve">
+    <value>Top Stage
+Insp Pos</value>
+  </data>
+  <data name="RunTopRear" xml:space="preserve">
+    <value>Top Stage
+Rear Pos</value>
+  </data>
+  <data name="RunULDPnPNG" xml:space="preserve">
+    <value>PnP NG
+PCB</value>
+  </data>
+  <data name="RunULDPnPOK" xml:space="preserve">
+    <value>PnP OK
+PCB</value>
+  </data>
+  <data name="RunULDStackNG" xml:space="preserve">
+    <value>Stacking
+NG PCB</value>
+  </data>
+  <data name="RunULDStackOK" xml:space="preserve">
+    <value>Stacking
+OK PCB</value>
+  </data>
+  <data name="Btm" xml:space="preserve">
+    <value>BTM</value>
+  </data>
+  <data name="BtmState" xml:space="preserve">
+    <value>BTM</value>
+  </data>
+  <data name="Bypass" xml:space="preserve">
+    <value>BYPASS</value>
+  </data>
+  <data name="ConnectState" xml:space="preserve">
+    <value>CONNECTION STATE</value>
+  </data>
+  <data name="CylLoadDown" xml:space="preserve">
+    <value>Picker Cyl Down</value>
+  </data>
+  <data name="CylLoadUP" xml:space="preserve">
+    <value>Picker Cyl UP</value>
+  </data>
+  <data name="CylRearDown" xml:space="preserve">
+    <value>Picker Cyl Down</value>
+  </data>
+  <data name="CylRearUP" xml:space="preserve">
+    <value>Picker Cyl UP</value>
+  </data>
+  <data name="CylULDDown" xml:space="preserve">
+    <value>Picker Cyl Down</value>
+  </data>
+  <data name="CylULDUP" xml:space="preserve">
+    <value>Picker Cyl UP</value>
+  </data>
+  <data name="Data" xml:space="preserve">
+    <value>DATA</value>
+  </data>
+  <data name="Engineer" xml:space="preserve">
+    <value>ENGINEER</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>ERROR</value>
+  </data>
+  <data name="Film" xml:space="preserve">
+    <value>FILM</value>
+  </data>
+  <data name="IO" xml:space="preserve">
+    <value>I/O</value>
+  </data>
+  <data name="Log" xml:space="preserve">
+    <value>LOG</value>
+  </data>
+  <data name="LotNumber" xml:space="preserve">
+    <value>LOT NUMBER</value>
+  </data>
+  <data name="LotSet" xml:space="preserve">
+    <value>SET</value>
+  </data>
+  <data name="Main" xml:space="preserve">
+    <value>MAIN</value>
+  </data>
+  <data name="Manual" xml:space="preserve">
+    <value>MANUAL</value>
+  </data>
+  <data name="MB_Cancel" xml:space="preserve">
+    <value>CANCEL</value>
+  </data>
+  <data name="MB_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Motor" xml:space="preserve">
+    <value>MOTOR</value>
+  </data>
+  <data name="NewPW" xml:space="preserve">
+    <value>NEW P/W</value>
+  </data>
+  <data name="OldPW" xml:space="preserve">
+    <value>OLD P/W</value>
+  </data>
+  <data name="Operator" xml:space="preserve">
+    <value>OPERATOR</value>
+  </data>
+  <data name="Professional" xml:space="preserve">
+    <value>PROFESSIONAL</value>
+  </data>
+  <data name="PWChange" xml:space="preserve">
+    <value>P/W
+CHANGE</value>
+  </data>
+  <data name="PWDel" xml:space="preserve">
+    <value>DEL</value>
+  </data>
+  <data name="PWPad" xml:space="preserve">
+    <value>PASSWORD PAD</value>
+  </data>
+  <data name="Rear" xml:space="preserve">
+    <value>REAR</value>
+  </data>
+  <data name="ReNewPW" xml:space="preserve">
+    <value>RE-NEW P/W</value>
+  </data>
+  <data name="SeqState" xml:space="preserve">
+    <value>SEQ
+STATE</value>
+  </data>
+  <data name="Top" xml:space="preserve">
+    <value>TOP</value>
+  </data>
+  <data name="TopState" xml:space="preserve">
+    <value>TOP</value>
+  </data>
+  <data name="ULD" xml:space="preserve">
+    <value>ULD</value>
+  </data>
+  <data name="UnitFilmPcik" xml:space="preserve">
+    <value>PICK</value>
+  </data>
+  <data name="UnitFilmPlaceNG" xml:space="preserve">
+    <value>NG PLACE</value>
+  </data>
+  <data name="UnitFilmPlaceOK" xml:space="preserve">
+    <value>OK PLACE</value>
+  </data>
+  <data name="UnitLoadPick" xml:space="preserve">
+    <value>PICK</value>
+  </data>
+  <data name="UnitLoadPlace" xml:space="preserve">
+    <value>PLACE</value>
+  </data>
+  <data name="UnitRearPick" xml:space="preserve">
+    <value>PICK</value>
+  </data>
+  <data name="UnitRearPlace" xml:space="preserve">
+    <value>PLACE</value>
+  </data>
+  <data name="UnitULDPick" xml:space="preserve">
+    <value>PICK</value>
+  </data>
+  <data name="UnitULDPlaceNG" xml:space="preserve">
+    <value>NG PLACE</value>
+  </data>
+  <data name="UnitULDPlaceOK" xml:space="preserve">
+    <value>OK PLACE</value>
+  </data>
+  <data name="UserSelect" xml:space="preserve">
+    <value>USER SELECTTION</value>
+  </data>
+  <data name="VacBtmStageOFF" xml:space="preserve">
+    <value>Stage Vac Off</value>
+  </data>
+  <data name="VacBtmStageON" xml:space="preserve">
+    <value>Stage Vac On</value>
+  </data>
+  <data name="VacFilmPickerOFF" xml:space="preserve">
+    <value>Picker Vac Off</value>
+  </data>
+  <data name="VacFilmPickerON" xml:space="preserve">
+    <value>Picker Vac On</value>
+  </data>
+  <data name="VacLoadPickerOFF" xml:space="preserve">
+    <value>Picker Vac Off</value>
+  </data>
+  <data name="VacLoadPickerON" xml:space="preserve">
+    <value>Picker Vac On</value>
+  </data>
+  <data name="VacRearPickerOFF" xml:space="preserve">
+    <value>Picker Vac Off</value>
+  </data>
+  <data name="VacRearPickerON" xml:space="preserve">
+    <value>Picker Vac On</value>
+  </data>
+  <data name="VacRearStageOFF" xml:space="preserve">
+    <value>Stage Vac Off</value>
+  </data>
+  <data name="VacRearStageON" xml:space="preserve">
+    <value>Stage Vac On</value>
+  </data>
+  <data name="VacTopmStageOFF" xml:space="preserve">
+    <value>Stage Vac Off</value>
+  </data>
+  <data name="VacTopmStageON" xml:space="preserve">
+    <value>Stage Vac On</value>
+  </data>
+  <data name="VacULDPickerOFF" xml:space="preserve">
+    <value>Picker Vac Off</value>
+  </data>
+  <data name="VacULDPickerON" xml:space="preserve">
+    <value>Picker Vac On</value>
+  </data>
+  <data name="MB_IndexWrite" xml:space="preserve">
+    <value>INDEX WRITE?</value>
+  </data>
+  <data name="PleaseWait" xml:space="preserve">
+    <value>Please Wait. . .</value>
+  </data>
+  <data name="RecipeModify" xml:space="preserve">
+    <value>RECIPE MODIFY</value>
+  </data>
+  <data name="OperationMode" xml:space="preserve">
+    <value>OPERATION MODE</value>
+  </data>
+  <data name="TenKey" xml:space="preserve">
+    <value>TENKEY</value>
+  </data>
+  <data name="ManualRun" xml:space="preserve">
+    <value>MANUAL RUN</value>
+  </data>
+  <data name="WMXState" xml:space="preserve">
+    <value>WMX</value>
+  </data>
+  <data name="Buzzer" xml:space="preserve">
+    <value>BUZZER</value>
+  </data>
+  <data name="CapBuffer" xml:space="preserve">
+    <value>CapBuffer</value>
+  </data>
+  <data name="CapCover" xml:space="preserve">
+    <value>CapCover</value>
+  </data>
+  <data name="CapUncover" xml:space="preserve">
+    <value>CapUncover</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Cover" xml:space="preserve">
+    <value>Cover</value>
+  </data>
+  <data name="FlowMapInfo" xml:space="preserve">
+    <value>FlowMap Info</value>
+  </data>
+  <data name="InsertLOTInfo" xml:space="preserve">
+    <value>Insert LOT Info</value>
+  </data>
+  <data name="Inspection1" xml:space="preserve">
+    <value>Inspection1</value>
+  </data>
+  <data name="Inspection2" xml:space="preserve">
+    <value>Inspection2</value>
+  </data>
+  <data name="LDConveyor" xml:space="preserve">
+    <value>LDConveyor</value>
+  </data>
+  <data name="LDLift" xml:space="preserve">
+    <value>LDLift</value>
+  </data>
+  <data name="LDTable1" xml:space="preserve">
+    <value>LDTable1</value>
+  </data>
+  <data name="LDTable2" xml:space="preserve">
+    <value>LDTable2</value>
+  </data>
+  <data name="LOTID" xml:space="preserve">
+    <value>LOT ID</value>
+  </data>
+  <data name="LotInfo" xml:space="preserve">
+    <value>LotInfo</value>
+  </data>
+  <data name="LOTStart" xml:space="preserve">
+    <value>LOT Start</value>
+  </data>
+  <data name="ManualCyl" xml:space="preserve">
+    <value>ManualCyl</value>
+  </data>
+  <data name="ManualSeq" xml:space="preserve">
+    <value>ManualSeq</value>
+  </data>
+  <data name="MemoryClean" xml:space="preserve">
+    <value>MemoryClean</value>
+  </data>
+  <data name="ProdCount" xml:space="preserve">
+    <value>Product Count</value>
+  </data>
+  <data name="Tact" xml:space="preserve">
+    <value>Tack Time</value>
+  </data>
+  <data name="Tray" xml:space="preserve">
+    <value>Tray</value>
+  </data>
+  <data name="TrayClean" xml:space="preserve">
+    <value>TrayClean</value>
+  </data>
+  <data name="ULDConveyor" xml:space="preserve">
+    <value>ULDConveyor</value>
+  </data>
+  <data name="ULDLift" xml:space="preserve">
+    <value>ULDLift</value>
+  </data>
+  <data name="ULDTable1" xml:space="preserve">
+    <value>ULDTable1</value>
+  </data>
+  <data name="ULDTable2" xml:space="preserve">
+    <value>ULDTable2</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="ErrorInitialize" xml:space="preserve">
+    <value>Error Initialize</value>
+  </data>
+  <data name="BTN_Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="BTN_ClearAll" xml:space="preserve">
+    <value>Clear All</value>
+  </data>
+  <data name="BTN_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="BTN_Make" xml:space="preserve">
+    <value>Make</value>
+  </data>
+  <data name="BTN_Move" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="BTN_Set" xml:space="preserve">
+    <value>Set</value>
+  </data>
+  <data name="CHK_Modify" xml:space="preserve">
+    <value>Modify</value>
+  </data>
+  <data name="MB_AllDelete" xml:space="preserve">
+    <value>Do You Want to All Delete?</value>
+  </data>
+  <data name="MB_AllHome" xml:space="preserve">
+    <value>Start All Home?</value>
+  </data>
+  <data name="MB_AutoRunStart" xml:space="preserve">
+    <value>Start Auto Run?</value>
+  </data>
+  <data name="MB_AutoRunStop" xml:space="preserve">
+    <value>Stop Auto Run?</value>
+  </data>
+  <data name="MB_Change" xml:space="preserve">
+    <value>Do you want to change?</value>
+  </data>
+  <data name="MB_ClearYield" xml:space="preserve">
+    <value>Clear Yield?</value>
+  </data>
+  <data name="MB_Delete" xml:space="preserve">
+    <value>Do You Want to Delete?</value>
+  </data>
+  <data name="MB_Info" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="MB_JobChangeHome" xml:space="preserve">
+    <value>After job change, You must do All Home</value>
+  </data>
+  <data name="MB_LoadTray" xml:space="preserve">
+    <value>Start Loading Tray?</value>
+  </data>
+  <data name="MB_Make" xml:space="preserve">
+    <value>Do You Want to Make?</value>
+  </data>
+  <data name="MB_Move" xml:space="preserve">
+    <value>Do You Want to Move?</value>
+  </data>
+  <data name="MB_SetValue" xml:space="preserve">
+    <value>Do You Want to Set Value?</value>
+  </data>
+  <data name="MB_VerifyRequest" xml:space="preserve">
+    <value>Please proceed with Verity.</value>
+  </data>
+  <data name="MB_CheckConditions" xml:space="preserve">
+    <value>Check conditions</value>
+  </data>
+  <data name="MB_Interference" xml:space="preserve">
+    <value>It cannot be executed due to interference.</value>
+  </data>
+  <data name="MB_RejectSend" xml:space="preserve">
+    <value>Do you want to send ID to the Review PC?</value>
+  </data>
+  <data name="RevState" xml:space="preserve">
+    <value>REV</value>
+  </data>
+  <data name="AlarmReset" xml:space="preserve">
+    <value>ALARM
+RESET</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>USER</value>
+  </data>
+  <data name="UserOK" xml:space="preserve">
+    <value>USER OK</value>
+  </data>
+  <data name="LdBuf1" xml:space="preserve">
+    <value>LD BUFFER1</value>
+  </data>
+  <data name="LdBuf2" xml:space="preserve">
+    <value>LD BUFFER2</value>
+  </data>
+  <data name="UldBuf" xml:space="preserve">
+    <value>ULD BUFFER</value>
+  </data>
+  <data name="RecipeNameModify" xml:space="preserve">
+    <value>RECIPE NAME MODIFY</value>
+  </data>
+  <data name="InspPlate1" xml:space="preserve">
+    <value>InspPlate1</value>
+  </data>
+  <data name="InspPlate2" xml:space="preserve">
+    <value>InspPlate2</value>
+  </data>
+  <data name="LoadInspPnP" xml:space="preserve">
+    <value>LOAD INSPECTION PNP</value>
+  </data>
+  <data name="LoadPnP" xml:space="preserve">
+    <value>LOAD PNP</value>
+  </data>
+  <data name="LoadTransfer" xml:space="preserve">
+    <value>LOAD TRANFER</value>
+  </data>
+  <data name="RejectBuffer" xml:space="preserve">
+    <value>REJECT BUFFER</value>
+  </data>
+  <data name="UnloadInspPnP" xml:space="preserve">
+    <value>UNLOAD INSPECTION PNP</value>
+  </data>
+  <data name="UnloadPnP" xml:space="preserve">
+    <value>UNLOAD PNP</value>
+  </data>
+  <data name="UnloadTransfer" xml:space="preserve">
+    <value>UNLOAD TRANSFER</value>
+  </data>
+  <data name="DataInsertConfirm" xml:space="preserve">
+    <value>Are you Insert this Data?</value>
+  </data>
+  <data name="Buffer" xml:space="preserve">
+    <value>BUFFER</value>
+  </data>
+  <data name="Inspection" xml:space="preserve">
+    <value>INSP</value>
+  </data>
+  <data name="Reject" xml:space="preserve">
+    <value>REJECT</value>
+  </data>
+  <data name="Transfer" xml:space="preserve">
+    <value>TRANSFER</value>
+  </data>
+  <data name="Unload" xml:space="preserve">
+    <value>UNLOAD</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="Cause" xml:space="preserve">
+    <value>Cause</value>
+  </data>
+  <data name="CheckComplete" xml:space="preserve">
+    <value>Check Complete</value>
+  </data>
+  <data name="Conversion" xml:space="preserve">
+    <value>Conversion</value>
+  </data>
+  <data name="EquipmentCheck" xml:space="preserve">
+    <value>Equipment Check</value>
+  </data>
+  <data name="ErrorCode" xml:space="preserve">
+    <value>ErrorCode</value>
+  </data>
+  <data name="OPID" xml:space="preserve">
+    <value>OP ID</value>
+  </data>
+  <data name="Part" xml:space="preserve">
+    <value>Part</value>
+  </data>
+  <data name="PM" xml:space="preserve">
+    <value>PM</value>
+  </data>
+  <data name="ProdRunOut" xml:space="preserve">
+    <value>Prod RunOut</value>
+  </data>
+  <data name="Repair" xml:space="preserve">
+    <value>Repair</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Report</value>
+  </data>
+  <data name="UseEngineer" xml:space="preserve">
+    <value>Use Engineer</value>
+  </data>
+  <data name="authority" xml:space="preserve">
+    <value>Authority</value>
+  <data name="NGStage" xml:space="preserve">
+    <value>NG STAGE</value>
+  </data>
+  <data name="OKStage" xml:space="preserve">
+    <value>OK STAGE</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>LANGUAGE</value>
+  </data>
+  <data name="DGRID_BTN_Run" xml:space="preserve">
+    <value>RUN</value>
+  </data>
+  <data name="DGRID_HD_Action" xml:space="preserve">
+    <value>ACTION</value>
+  </data>
+  <data name="DGRID_HD_Alarm" xml:space="preserve">
+    <value>ALARM</value>
+  </data>
+  <data name="DGRID_HD_AlarmDescription" xml:space="preserve">
+    <value>ALARM DESCRIPTION</value>
+  </data>
+  <data name="DGRID_HD_Bit" xml:space="preserve">
+    <value>BIT</value>
+  </data>
+  <data name="DGRID_HD_Date" xml:space="preserve">
+    <value>DATE</value>
+  </data>
+  <data name="DGRID_HD_DoubleData" xml:space="preserve">
+    <value>DOUBLE DATA</value>
+  </data>
+  <data name="DGRID_HD_Index" xml:space="preserve">
+    <value>INDEX</value>
+  </data>
+  <data name="DGRID_HD_Input" xml:space="preserve">
+    <value>INPUT</value>
+  </data>
+  <data name="DGRID_HD_IntegerData" xml:space="preserve">
+    <value>INTEGER DATA</value>
+  </data>
+  <data name="DGRID_HD_Level" xml:space="preserve">
+    <value>LEVEL</value>
+  </data>
+  <data name="DGRID_HD_ManualOP" xml:space="preserve">
+    <value>MANUAL OPERATION</value>
+  </data>
+  <data name="DGRID_HD_Message" xml:space="preserve">
+    <value>MESSAGE</value>
+  </data>
+  <data name="DGRID_HD_No" xml:space="preserve">
+    <value>NO</value>
+  </data>
+  <data name="DGRID_HD_On" xml:space="preserve">
+    <value>ON</value>
+  </data>
+  <data name="DGRID_HD_Output" xml:space="preserve">
+    <value>OUTPUT</value>
+  </data>
+  <data name="DGRID_HD_Position" xml:space="preserve">
+    <value>POSITION</value>
+  </data>
+  <data name="DGRID_HD_Recipe" xml:space="preserve">
+    <value>RECIPE</value>
+  </data>
+  <data name="DGRID_HD_RecipeData" xml:space="preserve">
+    <value>RECIPE DATA</value>
+  </data>
+  <data name="DGRID_HD_Status" xml:space="preserve">
+    <value>STATUS</value>
+  </data>
+  <data name="DGRID_HD_Unit" xml:space="preserve">
+    <value>UNIT</value>
+  </data>
+  <data name="DGRID_HD_Use" xml:space="preserve">
+    <value>Use</value>
+  </data>
+  <data name="DGRID_HD_UseSkip" xml:space="preserve">
+    <value>USE/SKIP</value>
+  </data>
+  <data name="DGRID_HD_Value" xml:space="preserve">
+    <value>VALUE</value>
+  </data>
+  <data name="DGRID_HD_Velocity" xml:space="preserve">
+    <value>VELOCITY</value>
+  </data>
+  <data name="RepeatMode" xml:space="preserve">
+    <value>REPEAT MOVE</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>SEARCH</value>
+  </data>
+  <data name="VelocityIndexWrite" xml:space="preserve">
+    <value>VELOCITY INDEX WRITE</value>
+  </data>
+  <data name="VelocityRate" xml:space="preserve">
+    <value>VELOCITY RATE</value>
+  </data>
+  <data name="LB_PartInfo" xml:space="preserve">
+    <value>PART INFO</value>
+  </data>
+  <data name="LB_PartList" xml:space="preserve">
+    <value>PART LIST</value>
+  </data>
+  <data name="LB_SSDInfo" xml:space="preserve">
+    <value>SSD INFO</value>
+  </data>
+  <data name="LB_SSDList" xml:space="preserve">
+    <value>SSD LIST</value>
+  </data>
+  <data name="LB_TrayInfo" xml:space="preserve">
+    <value>TRAY INFO</value>
+  </data>
+  <data name="LB_TrayList" xml:space="preserve">
+    <value>TRAY LIST</value>
+  </data>
+  <data name="BTN_Copy" xml:space="preserve">
+    <value>COPY</value>
+  </data>
+  <data name="BTN_DELET" xml:space="preserve">
+    <value>DELETE</value>
+  </data>
+  <data name="BTN_Paste" xml:space="preserve">
+    <value>PASTE</value>
+  </data>
+  <data name="BTN_SAVE" xml:space="preserve">
+    <value>SAVE</value>
+  </data>
+  <data name="BTN_SaveAll" xml:space="preserve">
+    <value>SAVE ALL</value>
+  </data>
+  <data name="DGV_BTMRESULT" xml:space="preserve">
+    <value>BOTTOM RESULT</value>
+  </data>
+  <data name="DGV_Exist" xml:space="preserve">
+    <value>EXIST</value>
+  </data>
+  <data name="DGV_TOPRESULT" xml:space="preserve">
+    <value>TOP RESULT</value>
+  </data>
+  <data name="DGV_TRAYCOLUMN" xml:space="preserve">
+    <value>TRAY COLUMN</value>
+  </data>
+  <data name="DGV_TRAYROW" xml:space="preserve">
+    <value>TRAY ROW</value>
+  </data>
+  <data name="DGV_TraySN" xml:space="preserve">
+    <value>TRAY SERIAL NUMBER</value>
+  </data>
+  <data name="DGV_UniqueID" xml:space="preserve">
+    <value>UNIQUE ID</value>
+  </data>
+  <data name="MB_ClearAll_Part" xml:space="preserve">
+    <value>Do You Want to Clear All Product In Target Part?</value>
+  </data>
+  <data name="MB_ClearAll_Tray" xml:space="preserve">
+    <value>Do You Want to Clear All Product In Target Tray?</value>
+  </data>
+  <data name="MB_Copy" xml:space="preserve">
+    <value>Do You Want to Copy Product?</value>
+  </data>
+  <data name="MB_Paste" xml:space="preserve">
+    <value>Do You Want to Paste Product?</value>
+  </data>
+  <data name="MB_Save" xml:space="preserve">
+    <value>Do You Want to Save?</value>
+  </data>
+  <data name="MB_SaveAll_Part" xml:space="preserve">
+    <value>Do You Want to Save All Product In Target Part?</value>
+  </data>
+  <data name="MB_SaveAll_Tray" xml:space="preserve">
+    <value>Do You Want to Save All Product In Target Tray?</value>
+  </data>
+  <data name="MB_RetestDataMove" xml:space="preserve">
+    <value>Do you want to move the tray information in the Reject Unloader to the loader lift?</value>
+  </data>
+  <data name="MB_Question" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="MB_RetestRun" xml:space="preserve">
+    <value>Do you want to Retest?</value>
+  </data>
+  <data name="MB_RejctTrayRemains" xml:space="preserve">
+    <value>Reject Tray remains.</value>
+  </data>
+  <data name="RjBuf1" xml:space="preserve">
+    <value>REJECT BUFFER1</value>
+  </data>
+  <data name="RjBuf2" xml:space="preserve">
+    <value>REJECT BUFFER2</value>
+  </data>
+  <data name="MaxCount" xml:space="preserve">
+    <value>Max Count</value>
+  </data>
+  <data name="MB_MesOnlineChange" xml:space="preserve">
+    <value>MES offline. Do you want to change to online status?</value>
+  </data>
+  <data name="MB_TrayBcrChange" xml:space="preserve">
+    <value>Tray BCR is unused. Do you want to change the status to Enabled?</value>
+  </data>
+  <data name="BcrState" xml:space="preserve">
+    <value>BCR</value>
+  </data>
+  <data name="MB_RejectLoaderEmpty" xml:space="preserve">
+    <value>Reject loader is empty.
+Door unlock and insert the tray.</value>
+  </data>
+  <data name="MB_RejectTrayNone" xml:space="preserve">
+    <value>Reject Tray None</value>
+  </data>
+  <data name="MB_UnloadTrayNone" xml:space="preserve">
+    <value>Unload Tray None</value>
+  </data>
+  <data name="MB_RejectTrayUnloadReady" xml:space="preserve">
+    <value>Reject Tray Unload Ready</value>
+  </data>
+  <data name="NotUsed" xml:space="preserve">
+    <value>Not Used</value>
+  </data>
+  <data name="MB_BypassRunning" xml:space="preserve">
+    <value>Running Bypass Mode</value>
+  </data>
+  <data name="MB_BypassWant" xml:space="preserve">
+    <value>Do you want to start Bypass Mode?</value>
+  </data>
+  <data name="MB_PauseFromInspPC" xml:space="preserve">
+    <value>A pause command was received from the Inspection PC.</value>
+  </data>
+  <data name="MB_RemoveAllAndHome" xml:space="preserve">
+    <value>Remove trays and products.
+And Click the All Home button Please.</value>
+  </data>
+  <data name="MB_RemoveTrayStep" xml:space="preserve">
+    <value>Step 1 : Plaese trun The Key to Manual Mode.
+Step 2 : Remove Tray On Load Tables
+Step 3 : Auto Run Start</value>
+  </data>
+  <data name="MB_RestartAfterAllHome" xml:space="preserve">
+    <value>Restart After All-Home</value>
+  </data>
+  <data name="MB_RjTrayRemeWant" xml:space="preserve">
+    <value>Do you want to start Removing Reject trays</value>
+  </data>
+  <data name="MB_RjTrayRemove" xml:space="preserve">
+    <value>Remove the reject tray from the Reject Loader and Unloader.</value>
+  </data>
+  <data name="MB_RjTrayRemoving" xml:space="preserve">
+    <value>Removing Reject trays</value>
+  </data>
+  <data name="MB_RjUldRemoveData" xml:space="preserve">
+    <value>Do you want to Remove Data from Reject Unloader?</value>
+  </data>
+  <data name="MB_SelRemoveTray" xml:space="preserve">
+    <value>Select the table from which you want to remove the Load tray.</value>
+  </data>
+  <data name="MB_SetupRecipe" xml:space="preserve">
+    <value>No recipe information to use.
+Setup a recipe.</value>
+  </data>
+  <data name="MB_WaitLotStart" xml:space="preserve">
+    <value>Wating for Lot Start Sending And Reciving to MES.</value>
+  </data>
+  <data name="MB_WantRemoveAllAuto" xml:space="preserve">
+    <value>Do you want to remove the trays from the machine automatically?</value>
+  </data>
+  <data name="MB_KeyLockAuto" xml:space="preserve">
+    <value>The Key-Lock is in Auto-Mode.</value>
+  </data>
+  <data name="MB_KeyLockManual" xml:space="preserve">
+    <value>The Key-Lock is in Manual-Mode.</value>
+  </data>
+  <data name="MB_Question" xml:space="preserve">
+    <value>Question</value>
+  </data>
+</root>

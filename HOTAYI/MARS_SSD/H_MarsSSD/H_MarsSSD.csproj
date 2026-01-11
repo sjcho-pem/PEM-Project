@@ -1,0 +1,1031 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9173C831-AE08-4B7A-9EE3-D989AA1E32C9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>H_MarsSSD</RootNamespace>
+    <AssemblyName>H_MarsSSD</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_WMX3_</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;_WMX3_;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;AMAT_RTX_RU;_WMX3_;</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;_WMX3_;</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>image\ReleaseImage.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug_Simul|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug_Sim\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_SIMUL_</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug_Simul|x64' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug_Sim\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;_SIMUL_</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_Ajin|AnyCPU'">
+    <OutputPath>bin\Debug_Ajin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;AMAT_RTX_RU;_AJIN_</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug_Ajin|x64'">
+    <OutputPath>bin\x64\Debug_Ajin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;AMAT_RTX_RU;_AJIN_</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_Ajin|AnyCPU'">
+    <OutputPath>bin\Release_Ajin\</OutputPath>
+    <DefineConstants>TRACE;AMAT_RTX_RU;_AJIN_</DefineConstants>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release_Ajin|x64'">
+    <OutputPath>bin\x64\Release_Ajin\</OutputPath>
+    <DefineConstants>TRACE;AMAT_RTX_RU;_AJIN_</DefineConstants>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cognex.DataMan.CogNamer.PC">
+      <HintPath>bin\DLL\Cognex.DataMan.CogNamer.PC.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.DataMan.SDK.Discovery.PC">
+      <HintPath>bin\DLL\Cognex.DataMan.SDK.Discovery.PC.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.DataMan.SDK.PC">
+      <HintPath>bin\DLL\Cognex.DataMan.SDK.PC.dll</HintPath>
+    </Reference>
+    <Reference Include="Cognex.DataMan.SDK.Utils.PC">
+      <HintPath>bin\DLL\Cognex.DataMan.SDK.Utils.PC.dll</HintPath>
+    </Reference>
+    <Reference Include="CoreMotionApi_CLRLib">
+      <HintPath>C:\Program Files\SoftServo\WMX3\Lib\CoreMotionApi_CLRLib.dll</HintPath>
+    </Reference>
+    <Reference Include="EcApi_CLRLib">
+      <HintPath>C:\Program Files\SoftServo\WMX3\Lib\EcApi_CLRLib.dll</HintPath>
+    </Reference>
+    <Reference Include="IOApi_CLRLib">
+      <HintPath>C:\Program Files\SoftServo\WMX3\Lib\IOApi_CLRLib.dll</HintPath>
+    </Reference>
+    <Reference Include="LogApi_CLRLib">
+      <HintPath>C:\Program Files\SoftServo\WMX3\Lib\LogApi_CLRLib.dll</HintPath>
+    </Reference>
+    <Reference Include="PMN.Control.WPF.MachineAni">
+      <HintPath>bin\DLL\PMN.Control.WPF.MachineAni.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UbiCom.Net">
+      <HintPath>bin\DLL\UbiCom.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="UbiGEM.Net">
+      <HintPath>bin\DLL\UbiGEM.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WMX3Api_CLRLib, Version=1.0.8166.31087, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\SoftServo\WMX3\Lib\WMX3Api_CLRLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="0. CTRL\CSimulIO.cs" />
+    <Compile Include="0. CTRL\CSimulKernelBase.cs" />
+    <Compile Include="0. CTRL\CSimulMotor.cs" />
+    <Compile Include="0. CTRL\CWmxKernelBase.cs" />
+    <Compile Include="1. CLASS\BarcodeSystem.cs" />
+    <Compile Include="1. CLASS\BarcodeSystem_Simul.cs" />
+    <Compile Include="1. CLASS\BaseBarcodeSystem.cs" />
+    <Compile Include="1. CLASS\FlowMng.cs" />
+    <Compile Include="1. CLASS\GLog.cs" />
+    <Compile Include="1. CLASS\PVI.cs" />
+    <Compile Include="1. CLASS\Reference\SDM.cs" />
+    <Compile Include="1. CLASS\Reference\DDM.cs" />
+    <Compile Include="1. CLASS\Reference\NDM.cs" />
+    <Compile Include="1. CLASS\Reference\TrayPnPRecipe.cs" />
+    <Compile Include="1. CLASS\Soket\AsyncSocketClient.cs" />
+    <Compile Include="1. CLASS\Soket\AsyncSocketServer.cs" />
+    <Compile Include="1. CLASS\Soket\CommFTV.cs" />
+    <Compile Include="1. CLASS\Soket\CommFTV_Sim.cs" />
+    <Compile Include="1. CLASS\Soket\CommInsp_Sim.cs" />
+    <Compile Include="1. CLASS\Soket\CommUbiGEM.cs" />
+    <Compile Include="1. CLASS\Soket\SocketClientClass.cs" />
+    <Compile Include="1. CLASS\Soket\CommInsp.cs" />
+    <Compile Include="1. CLASS\Soket\UbiGEMBaseClass.cs" />
+    <Compile Include="1. CLASS\XML.cs" />
+    <Compile Include="1. CLASS\Reference\CircularQueue.cs" />
+    <Compile Include="1. CLASS\Reference\PClassLib.cs" />
+    <Compile Include="1. CLASS\Reference\PStopwatch.cs" />
+    <Compile Include="1. CLASS\Reference\SMM.cs" />
+    <Compile Include="2. SEQ\PART\SeqJobTeaching.cs" />
+    <Compile Include="2. SEQ\PART\SeqLoadTrayTable2.cs" />
+    <Compile Include="2. SEQ\PART\SeqTrayLoader.cs" />
+    <Compile Include="2. SEQ\SeqInterlock.cs" />
+    <Compile Include="2. SEQ\PART\SeqLoadInspPnP.cs" />
+    <Compile Include="2. SEQ\PART\SeqRejectBuffer.cs" />
+    <Compile Include="2. SEQ\PART\SeqTrayClean.cs" />
+    <Compile Include="2. SEQ\PART\SeqUnloadBuffer.cs" />
+    <Compile Include="2. SEQ\PART\SeqLoadBuffer.cs" />
+    <Compile Include="2. SEQ\PART\SeqLoadPnP.cs" />
+    <Compile Include="2. SEQ\PART\SeqLoadTrayTable1.cs" />
+    <Compile Include="2. SEQ\PART\SeqInspPlate.cs" />
+    <Compile Include="2. SEQ\PART\SeqUnloadInspPnP.cs" />
+    <Compile Include="2. SEQ\PART\SeqLoadTransfer.cs" />
+    <Compile Include="2. SEQ\PART\SeqTrayUnloader.cs" />
+    <Compile Include="2. SEQ\PART\SeqUnloadPnP.cs" />
+    <Compile Include="2. SEQ\SeqMain.cs" />
+    <Compile Include="2. SEQ\PART\SeqUnloadTransfer.cs" />
+    <Compile Include="2. SEQ\PART\SeqUnloadTrayTable.cs" />
+    <Compile Include="2. SEQ\SeqBase.cs" />
+    <Compile Include="2. SEQ\LampBuzzer.cs" />
+    <Compile Include="2. SEQ\SeqManual.cs" />
+    <Compile Include="2. SEQ\SeqUbiGEMComm.cs" />
+    <Compile Include="2. SEQ\Simulation.cs" />
+    <Compile Include="2. SEQ\SystemError.cs" />
+    <Compile Include="2. SEQ\AllHome.cs" />
+    <Compile Include="2. SEQ\SeqButton.cs" />
+    <Compile Include="0. CTRL\CMotor.cs" />
+    <Compile Include="3. COMMON\ActBase.cs" />
+    <Compile Include="3. COMMON\Global.cs" />
+    <Compile Include="1. CLASS\CAlarmMng.cs" />
+    <Compile Include="3. COMMON\CKernel.cs" />
+    <Compile Include="3. COMMON\Actuators.cs" />
+    <Compile Include="0. CTRL\CIO.cs" />
+    <Compile Include="0. CTRL\CWMX3.cs" />
+    <Compile Include="0. CTRL\CWmxIO.cs" />
+    <Compile Include="0. CTRL\CWmxMotor.cs" />
+    <Compile Include="1. CLASS\LogBase.cs" />
+    <Compile Include="4. DEFINE\ALARM.cs" />
+    <Compile Include="4. DEFINE\eSDM.cs" />
+    <Compile Include="4. DEFINE\FLOW.cs" />
+    <Compile Include="4. DEFINE\MOTOR.cs" />
+    <Compile Include="4. DEFINE\SEQ.cs" />
+    <Compile Include="4. DEFINE\UBIGEM.cs" />
+    <Compile Include="4. DEFINE\USESKIP.cs" />
+    <Compile Include="4. DEFINE\eNDM.cs" />
+    <Compile Include="4. DEFINE\eDDM.cs" />
+    <Compile Include="4. DEFINE\INPUT.cs" />
+    <Compile Include="4. DEFINE\OUTPUT.cs" />
+    <Compile Include="frmManualCyl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManualCyl.designer.cs">
+      <DependentUpon>frmManualCyl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManualEtc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManualEtc.designer.cs">
+      <DependentUpon>frmManualEtc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManualTCP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManualTCP.designer.cs">
+      <DependentUpon>frmManualTCP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManualSeq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManualSeq.designer.cs">
+      <DependentUpon>frmManualSeq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManualRun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManualRun.designer.cs">
+      <DependentUpon>frmManualRun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1. CLASS\Reference\StructParsing.cs" />
+    <Compile Include="1. CLASS\Soket\SocketBaseClass.cs" />
+    <Compile Include="1. CLASS\Soket\SocketServerClass.cs" />
+    <Compile Include="1. CLASS\Soket\SocketDataClass.cs" />
+    <Compile Include="frmTenKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTenKey.Designer.cs">
+      <DependentUpon>frmTenKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmAllHomeMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmAllHomeMonitor.Designer.cs">
+      <DependentUpon>frmAllHomeMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmBarcode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmBarcode.Designer.cs">
+      <DependentUpon>frmBarcode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmBarcodeViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmBarcodeViewer.Designer.cs">
+      <DependentUpon>frmBarcodeViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmEdit.Designer.cs">
+      <DependentUpon>frmEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmImageViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmImageViewer.Designer.cs">
+      <DependentUpon>frmImageViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmIPSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmIPSetting.Designer.cs">
+      <DependentUpon>frmIPSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmLanguageSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmLanguageSelect.Designer.cs">
+      <DependentUpon>frmLanguageSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmLevelSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmLevelSetting.Designer.cs">
+      <DependentUpon>frmLevelSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmManage.Designer.cs">
+      <DependentUpon>frmManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmProductSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmProductSelect.Designer.cs">
+      <DependentUpon>frmProductSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmRegist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmRegist.Designer.cs">
+      <DependentUpon>frmRegist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmSeqMessegeBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmSeqMessegeBox.Designer.cs">
+      <DependentUpon>frmSeqMessegeBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmSetGapSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmSetGapSize.designer.cs">
+      <DependentUpon>frmSetGapSize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmSubManualCyl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmSubManualCyl.Designer.cs">
+      <DependentUpon>frmSubManualCyl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmTraySizeSensorSel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmTraySizeSensorSel.Designer.cs">
+      <DependentUpon>frmTraySizeSensorSel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmProductEditPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmProductEditPopup.Designer.cs">
+      <DependentUpon>frmProductEditPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmRecipeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmRecipeManager.Designer.cs">
+      <DependentUpon>frmRecipeManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmSearch.Designer.cs">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmJobTeaching.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmJobTeaching.Designer.cs">
+      <DependentUpon>frmJobTeaching.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmKeyboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmKeyboard.Designer.cs">
+      <DependentUpon>frmKeyboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmSelectMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmSelectMessageBox.designer.cs">
+      <DependentUpon>frmSelectMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmSetRecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmSetRecipe.Designer.cs">
+      <DependentUpon>frmSetRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmTact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmTact.Designer.cs">
+      <DependentUpon>frmTact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmListBoxSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmListBoxSelect.Designer.cs">
+      <DependentUpon>frmListBoxSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmPnPSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmPnPSelect.Designer.cs">
+      <DependentUpon>frmPnPSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmComboBoxSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmComboBoxSelect.Designer.cs">
+      <DependentUpon>frmComboBoxSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmFlowMapInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmFlowMapInfo.Designer.cs">
+      <DependentUpon>frmFlowMapInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmKeyPad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmKeyPad.Designer.cs">
+      <DependentUpon>frmKeyPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmLoading.designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmOtherIO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmOtherIO.Designer.cs">
+      <DependentUpon>frmOtherIO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1. CLASS\Reference\CSVFile.cs" />
+    <Compile Include="frmLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLog.designer.cs">
+      <DependentUpon>frmLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Language\languageDefault.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>languageDefault.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Language\LanguageManager.cs" />
+    <Compile Include="1. CLASS\Reference\FileConversion.cs" />
+    <Compile Include="frmMainDisp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainDisp.designer.cs">
+      <DependentUpon>frmMainDisp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManual.designer.cs">
+      <DependentUpon>frmManual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMotor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMotor.designer.cs">
+      <DependentUpon>frmMotor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmErrDescView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmErrDescView.designer.cs">
+      <DependentUpon>frmErrDescView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmMessageBox.designer.cs">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIO.designer.cs">
+      <DependentUpon>frmIO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmPickerSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmPickerSelect.Designer.cs">
+      <DependentUpon>frmPickerSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmSubItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmSubItems.Designer.cs">
+      <DependentUpon>frmSubItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForm\frmUPHMeasurement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForm\frmUPHMeasurement.Designer.cs">
+      <DependentUpon>frmUPHMeasurement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubPage\frmData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubPage\frmData.designer.cs">
+      <DependentUpon>frmData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubPage\frmData_Bit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubPage\frmData_Bit.Designer.cs">
+      <DependentUpon>frmData_Bit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubPage\frmData_Dm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubPage\frmData_Dm.designer.cs">
+      <DependentUpon>frmData_Dm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmError.designer.cs">
+      <DependentUpon>frmError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubPage\frmData_Recipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubPage\frmData_Recipe.designer.cs">
+      <DependentUpon>frmData_Recipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubPage\frmData_SDm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubPage\frmData_SDm.designer.cs">
+      <DependentUpon>frmData_SDm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubPage\frmData_Useskip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubPage\frmData_Useskip.designer.cs">
+      <DependentUpon>frmData_Useskip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="4. DEFINE\BIT.cs" />
+    <Compile Include="1. CLASS\Reference\Define.cs" />
+    <Compile Include="4. DEFINE\DEVICE.cs" />
+    <Compile Include="1. CLASS\Reference\IniFile.cs" />
+    <Compile Include="1. CLASS\UILog.cs" />
+    <Compile Include="4. DEFINE\MANUAL.cs" />
+    <Compile Include="1. CLASS\SharedMemory.cs" />
+    <Compile Include="1. CLASS\Reference\TypeConversion.cs" />
+    <Compile Include="SubPage\frmErrRecipeDisp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubPage\frmErrRecipeDisp.designer.cs">
+      <DependentUpon>frmErrRecipeDisp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucJobTrayAni.xaml.cs">
+      <DependentUpon>ucJobTrayAni.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ucMainDisp.xaml.cs">
+      <DependentUpon>ucMainDisp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ucProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ucProgressBar.Designer.cs">
+      <DependentUpon>ucProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucTraynPartFigure.xaml.cs">
+      <DependentUpon>ucTraynPartFigure.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmLog.resx">
+      <DependentUpon>frmLog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainDisp.resx">
+      <DependentUpon>frmMainDisp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManualCyl.resx">
+      <DependentUpon>frmManualCyl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManualEtc.resx">
+      <DependentUpon>frmManualEtc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManualTCP.resx">
+      <DependentUpon>frmManualTCP.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManualSeq.resx">
+      <DependentUpon>frmManualSeq.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManualRun.resx">
+      <DependentUpon>frmManualRun.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManual.resx">
+      <DependentUpon>frmManual.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMotor.resx">
+      <DependentUpon>frmMotor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTenKey.resx">
+      <DependentUpon>frmTenKey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmAllHomeMonitor.resx">
+      <DependentUpon>frmAllHomeMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmBarcode.resx">
+      <DependentUpon>frmBarcode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmBarcodeViewer.resx">
+      <DependentUpon>frmBarcodeViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmEdit.resx">
+      <DependentUpon>frmEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmImageViewer.resx">
+      <DependentUpon>frmImageViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmIPSetting.resx">
+      <DependentUpon>frmIPSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmLanguageSelect.resx">
+      <DependentUpon>frmLanguageSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmLevelSetting.resx">
+      <DependentUpon>frmLevelSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmManage.resx">
+      <DependentUpon>frmManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmProductSelect.resx">
+      <DependentUpon>frmProductSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmRegist.resx">
+      <DependentUpon>frmRegist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmSeqMessegeBox.resx">
+      <DependentUpon>frmSeqMessegeBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmSetGapSize.resx">
+      <DependentUpon>frmSetGapSize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmSubManualCyl.resx">
+      <DependentUpon>frmSubManualCyl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmTraySizeSensorSel.resx">
+      <DependentUpon>frmTraySizeSensorSel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmProductEditPopup.resx">
+      <DependentUpon>frmProductEditPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmRecipeManager.resx">
+      <DependentUpon>frmRecipeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmSearch.resx">
+      <DependentUpon>frmSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmJobTeaching.resx">
+      <DependentUpon>frmJobTeaching.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmKeyboard.resx">
+      <DependentUpon>frmKeyboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmSelectMessageBox.resx">
+      <DependentUpon>frmSelectMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmSetRecipe.resx">
+      <DependentUpon>frmSetRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmTact.resx">
+      <DependentUpon>frmTact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmListBoxSelect.resx">
+      <DependentUpon>frmListBoxSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmPnPSelect.resx">
+      <DependentUpon>frmPnPSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmComboBoxSelect.resx">
+      <DependentUpon>frmComboBoxSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmFlowMapInfo.resx">
+      <DependentUpon>frmFlowMapInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmKeyPad.resx">
+      <DependentUpon>frmKeyPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmOtherIO.resx">
+      <DependentUpon>frmOtherIO.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language\languageDefault.ko-KR.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language\languageDefault.en-US.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language\languageDefault.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>languageDefault.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Language\languageDefault.zh-CN.resx" />
+    <EmbeddedResource Include="SubForm\frmErrDescView.resx">
+      <DependentUpon>frmErrDescView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmMessageBox.resx">
+      <DependentUpon>frmMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIO.resx">
+      <DependentUpon>frmIO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmPickerSelect.resx">
+      <DependentUpon>frmPickerSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmSubItems.resx">
+      <DependentUpon>frmSubItems.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForm\frmUPHMeasurement.resx">
+      <DependentUpon>frmUPHMeasurement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubPage\frmData.resx">
+      <DependentUpon>frmData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubPage\frmData_Bit.resx">
+      <DependentUpon>frmData_Bit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubPage\frmData_Dm.resx">
+      <DependentUpon>frmData_Dm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmError.resx">
+      <DependentUpon>frmError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubPage\frmData_Recipe.resx">
+      <DependentUpon>frmData_Recipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubPage\frmData_SDm.resx">
+      <DependentUpon>frmData_SDm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubPage\frmData_Useskip.resx">
+      <DependentUpon>frmData_Useskip.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubPage\frmErrRecipeDisp.resx">
+      <DependentUpon>frmErrRecipeDisp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucProgressBar.resx">
+      <DependentUpon>ucProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BuffClean.png" />
+    <Resource Include="Resources\CameraBtm.png" />
+    <Resource Include="Resources\CameraTop.png" />
+    <Resource Include="Resources\clean-air.png" />
+    <Resource Include="Resources\InspBuffer.png" />
+    <Resource Include="Resources\Memory.png" />
+    <Resource Include="Resources\MemoryCleanBtm.png" />
+    <Resource Include="Resources\MemoryCleanTop.png" />
+    <Resource Include="Resources\MemoryTray.png" />
+    <Resource Include="Resources\PickerIcon.png" />
+    <Resource Include="Resources\RailCenter.png" />
+    <Resource Include="Resources\RailLeft.png" />
+    <Resource Include="Resources\RailRight.png" />
+    <Resource Include="Resources\RejectTray.png" />
+    <Resource Include="Resources\TrayBuffer.png" />
+    <Resource Include="Resources\edit_remove.ico" />
+    <Resource Include="Resources\edit_add.ico" />
+    <Resource Include="Resources\FolderIcon.png" />
+    <Resource Include="Resources\Previous_48.png" />
+    <Resource Include="Resources\StopOn_72p.png" />
+    <Resource Include="Resources\PauseOn_72p.png" />
+    <Resource Include="Resources\StartOn_72p.png" />
+    <Resource Include="Resources\StopOff_72p.png" />
+    <Resource Include="Resources\PauseOff_72p.png" />
+    <Resource Include="Resources\StartOff_72p.png" />
+    <Resource Include="Resources\SaveBlue_24p.png" />
+    <Resource Include="Resources\RecipeChange_24p.png" />
+    <Resource Include="Resources\RecipeCopy_24p.png" />
+    <Resource Include="Resources\FolderSearch_24p.png" />
+    <Resource Include="Resources\JogPlusOn_64p.png" />
+    <Resource Include="Resources\JogMinusOn_64.png" />
+    <Resource Include="Resources\SaveBlue_72p.png" />
+    <Resource Include="Resources\StepPlusOff_64p.png" />
+    <Resource Include="Resources\StepMinusOff_64p.png" />
+    <Resource Include="Resources\JogPlusOff_64p.png" />
+    <Resource Include="Resources\JogMinusOff_64.png" />
+    <Resource Include="Resources\pemtron2.png" />
+    <Resource Include="Resources\AppliedMaterialsLogoWhite.png" />
+    <None Include="image\stop.png" />
+    <None Include="image\Run.png" />
+    <None Include="image\puase.png" />
+    <None Include="image\Manual_Start.png" />
+    <None Include="image\pemtron.png" />
+    <None Include="image\LightOff.png" />
+    <None Include="image\LightOn.png" />
+    <None Include="image\BtnRun1.png" />
+    <None Include="image\btnPurseOff.png" />
+    <None Include="image\btnPurseOn.png" />
+    <None Include="image\BtnRunOff.png" />
+    <None Include="image\BtnRunOn.png" />
+    <None Include="image\btnStopOff.png" />
+    <None Include="image\btnStopOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="ucJobTrayAni.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ucMainDisp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ucTraynPartFigure.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\StageAxisY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\StageAxisX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Tray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\TrayCap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BellOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\StartDisable_72p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\StopDisable_72p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\PauseDisable_72p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HomeOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HomeDisable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\HomeOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Air.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\BellOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\loading_400p.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Operators.png" />
+    <Resource Include="Resources\Tray_Job.PNG" />
+    <Resource Include="Resources\Reset_36.png" />
+    <Resource Include="Resources\Layout.png" />
+    <Resource Include="Resources\edit_exit.png" />
+    <Resource Include="Resources\Edit_24.png" />
+    <Resource Include="Resources\Delete_24.png" />
+    <Resource Include="Resources\Mars_LDBufClean.png" />
+    <Resource Include="Resources\minimization2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Refresh_48p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Refresh_72p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\LoaderConvSen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sensor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\Member_26p.png" />
+    <None Include="image\VisiblePassword1_24p.png" />
+    <None Include="image\VisiblePassword2_24p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\Add_26p.png" />
+    <None Include="image\Edit_26p.png" />
+    <None Include="image\Keyboard24p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_64p.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="image\LogInState.png" />
+    <Content Include="image\LogOutState.png" />
+    <None Include="Resources\Layout_Job_Load_Check.png" />
+    <Resource Include="Resources\gapsize.png" />
+    <Resource Include="Resources\Layout_Button.png" />
+    <None Include="Resources\Layout_withNumber.png" />
+    <None Include="Resources\Layout_Job_Unload.png" />
+    <None Include="Resources\Layout_Job_Load.png" />
+    <None Include="image\main_close.png" />
+    <None Include="Resources\BlueCircle.png" />
+    <Resource Include="Resources\CameraBtmDouble.png" />
+    <Resource Include="Resources\CameraTopDouble.png" />
+    <Content Include="Resources\Delete_24p.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy /y "$(WMX3)\Lib\IMdll.dll" "$(TargetDir)"
+copy /y "$(WMX3)\Lib\EventApi_CLRLib.dll" "$(TargetDir)"
+copy /y "$(WMX3)\Lib\LogApi_CLRLib.dll" "$(TargetDir)"
+copy /y "$(WMX3)\Lib\WMX3Api_CLRLib.dll" "$(TargetDir)"
+copy /y "$(WMX3)\Lib\EcApi_CLRLib.dll" "$(TargetDir)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

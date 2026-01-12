@@ -825,10 +825,6 @@ namespace H_MarsSSD
 								G.seqInspPlate1.InspWaitStart();
 							}
 						}
-						else if (SM.SHM.IsBitData(BIT.ReferenceRequestTop1) == true || SM.SHM.IsBitData(BIT.ReferenceRequestBtm1) == true)
-						{
-							G.seqInspPlate1.ReferenceStart(true, false, 0);
-						}
 						else if (SM.FMP.IsFlow(FlowPart.LDInspPnP) == true || SM.FMP.IsFlow(FlowPart.LDBuffer1) == true || SM.FMP.IsFlow(FlowPart.LDBuffer2) == true)
 						{
 							G.seqInspPlate1.LoadWaitStart();
@@ -852,10 +848,6 @@ namespace H_MarsSSD
 							{
 								G.seqInspPlate2.InspWaitStart();
 							}
-						}
-						else if (SM.SHM.IsBitData(BIT.ReferenceRequestTop2) == true || SM.SHM.IsBitData(BIT.ReferenceRequestBtm2) == true)
-						{
-							G.seqInspPlate2.ReferenceStart(true, false, 0);
 						}
 						else if (SM.FMP.IsFlow(FlowPart.LDInspPnP) == true || SM.FMP.IsFlow(FlowPart.LDBuffer1) == true || SM.FMP.IsFlow(FlowPart.LDBuffer2) == true)
 						{

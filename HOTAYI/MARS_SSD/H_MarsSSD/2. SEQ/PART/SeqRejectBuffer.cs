@@ -49,8 +49,7 @@ namespace H_MarsSSD
 			READY_ALARM_DIR,
 			READY_ALARM_SIZE,
 
-            TRAYCHANGE_09,
-            TRAYCHANGE_10,
+			TRAYCHANGE_10,
 			TRAYCHANGE_MESCHECK1,
 			TRAYCHANGE_MESCHECK2,
 			TRAYCHANGE_MESCHECK3,
@@ -93,6 +92,7 @@ namespace H_MarsSSD
 		private	bool	m_IsMtHome			= true;
 		private	int		m_SgemRetryCount	= 0;
         private bool m_bAirVibRequest = false;
+		private FlowTray FlowTable = FlowTray.Reject;
 		RunStateType	BeforeState = RunStateType.NormalRun;
 		#endregion
 
@@ -228,29 +228,6 @@ namespace H_MarsSSD
 			}
 		}
 
-        public void AirVibrate(bool bOn)
-        {
-            if (bOn) arrAct[Act.AirVib].SetPos(SenPos.ON);
-            else     arrAct[Act.AirVib].SetPos(SenPos.OFF);
-        }
-
-        public bool AirVibRequest()
-        {
-            bool bReturn;
-            bool bVibStart = SM.FMT[FlowTray.Reject].GetExistCount(ProdStatus.OK) >= SM.FMP[FlowPart.ULDPnP].GetMaxProdCount() ||
-                        (SM.FMT[FlowTray.Reject].GetVerifyDoneCount() == SM.FMT[FlowTray.Reject].GetExistCount() && SM.FMT[FlowTray.Reject].GetExistCount(ProdStatus.OK) > 0);
-
-            bReturn = false;
-
-            if (bVibStart && !m_bAirVibRequest)
-            {
-                if (bVibStart) bReturn = true;
-                else bReturn = false;
-            }
-            m_bAirVibRequest = bVibStart;
-
-            return bReturn;
-        }
 
 		private void CheckNGCount()
 		{
@@ -844,7 +821,7 @@ namespace H_MarsSSD
 						{
 							if (SM.SHM.GetUseSkipData(USESKIP.SGEM) == false || SM.FMT.IsFlow(FlowTray.Reject) == false)
 							{
-								smm.Next(Cmd.TRAYCHANGE_09);
+								smm.Next(Cmd.TRAYCHANGE_10);
 								break;
 							}
 							//Pick중에 SendTrayValidation 진행중일 수 있기 때문에 대기, 시퀀스 진행해보고 문제 발생시 디테일하게 체크
@@ -864,7 +841,7 @@ namespace H_MarsSSD
 						{
 							if (SM.SHM.GetUseSkipData(USESKIP.SGEM) == false)
 							{
-								smm.Next(Cmd.TRAYCHANGE_09);
+								smm.Next(Cmd.TRAYCHANGE_10);
 								break;
 							}
 
@@ -874,18 +851,10 @@ namespace H_MarsSSD
 								break;
 							}
 
-							smm.Next(Cmd.TRAYCHANGE_09);
+							smm.Next(Cmd.TRAYCHANGE_10);
 						}
 						break;
 
-                    case Cmd.TRAYCHANGE_09:
-                        {
-                            arrAct[Act.AirVib].SetPos(SenPos.ON);
-                            if (smm.Delayms(NDm.Read(eNDM.AirVibrateTime)) == false) break;
-
-                            smm.Next(Cmd.TRAYCHANGE_10);
-                        }
-                        break;
 
                     case Cmd.TRAYCHANGE_10:
 						{
@@ -1131,13 +1100,14 @@ namespace H_MarsSSD
 					case Cmd.ALIGN_10:
 						{
 							if (SM.SHM.GetUseSkipData(USESKIP.RejectBufferAligner) == false ||
-								SM.FMT[FlowTable].IsAlignDone() == true)
+								SM.FMT[FlowTray.Reject].IsAlignDone() == true)
 							{
 								smm.Next(Cmd.END);
 								break;
 							}
 
 							arrAct[Act.AirVib].SetPos(SenPos.ON);
+
 							//G.cKernel.AOut(DO_Aligner, true);
 
 							smm.Next(Cmd.ALIGN_20);
@@ -1161,7 +1131,7 @@ namespace H_MarsSSD
 
 					case Cmd.END:
 						{
-							SM.FMT[FlowTable].SetTrayHandlingStatus(ProdHandlingStatus.Aligned);
+							SM.FMT[FlowTray.Reject].SetTrayHandlingStatus(ProdHandlingStatus.Aligned);
 							smm.Next(Cmd.START);
 						}
 						break;

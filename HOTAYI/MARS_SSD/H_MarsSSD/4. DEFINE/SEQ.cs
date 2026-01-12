@@ -212,6 +212,10 @@ namespace H_MarsSSD
 		UNLOADTABLE1_RELEASE,
 		[DefaultValueAttribute("UNLOADTRAY2/RELEASE")]
 		UNLOADTABLE2_RELEASE,
+		[DefaultValueAttribute("UNLOADTRAY1/ALIGN")]
+		UNLOADTABLE1_ALIGN,
+		[DefaultValueAttribute("UNLOADTRAY2/ALIGN")]
+		UNLOADTABLE2_ALIGN,
 
 		[DefaultValueAttribute("ULDTRANS/HOME")]
 		ULDTRANS_HOME,

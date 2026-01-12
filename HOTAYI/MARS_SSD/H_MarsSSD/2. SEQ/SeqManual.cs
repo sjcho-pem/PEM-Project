@@ -164,7 +164,7 @@ namespace H_MarsSSD
 								return;
 							}
 
-                            G.seqInspPlate1.ReferenceStart(true, true, 0);
+                            G.seqInspPlate1.ReferenceStart(0);
 						}
 						break;
 					case MANUAL.ReferencePositionBtm1:
@@ -188,7 +188,7 @@ namespace H_MarsSSD
 								return;
 							}
 
-                            G.seqInspPlate2.ReferenceStart(true, true, 0);
+                            G.seqInspPlate2.ReferenceStart(0);
 						}
 						break;
 					case MANUAL.ReferencePositionTop2:
@@ -212,7 +212,7 @@ namespace H_MarsSSD
 								return;
 							}
 
-							G.seqInspPlate1.ReferenceStart(true, true, 1);
+							G.seqInspPlate1.ReferenceStart(1);
 						}
 						break;
 					case MANUAL.ReferencePositionBtm2:
@@ -236,7 +236,7 @@ namespace H_MarsSSD
 								return;
 							}
 
-							G.seqInspPlate2.ReferenceStart(true, true, 1);
+							G.seqInspPlate2.ReferenceStart(1);
 						}
 						break;
 

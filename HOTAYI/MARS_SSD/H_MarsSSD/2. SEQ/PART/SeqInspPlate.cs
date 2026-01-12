@@ -234,8 +234,8 @@ namespace H_MarsSSD
 
 		private	bool			m_IsGrip			= false;
 		private	bool			m_bInspDone			= false;
-		private	bool			m_bReferenceStart	= false;
-		private	bool			m_bReferenceManual	= false;
+		//private	bool			m_bReferenceStart	= false;
+		//private	bool			m_bReferenceManual	= false;
 		private	int				m_nHead				= 0;
 		private	int				m_nMoveType			= 0; // 0 = Light Jig, 1 = 3D Jig , 2 = 1StageMroPos, 3= 2StageMropPos, 4  = CamMroPos)
 		private	bool[]			m_bDIInspEnd		= new bool[2] {false, false};
@@ -365,10 +365,8 @@ namespace H_MarsSSD
 
 		public bool TeachWaitStart() { return SetSeqRun(ref m_smmTeachWait); }
 
-		public bool ReferenceStart(bool bReferenceStart, bool bIsManual, int nHead)
+		public bool ReferenceStart(int nHead)
 		{
-			m_bReferenceStart = bReferenceStart;
-			m_bReferenceManual = bIsManual;
 			m_nHead = nHead;
 			return SetSeqRun(ref m_smmReference);
 		}
@@ -2284,14 +2282,8 @@ namespace H_MarsSSD
 							if (smm.eInput == InState.run)
 							{
 								smm.eInput = InState.none;
-								if (m_bReferenceManual == true)
-								{
-									smm.Next(Cmd.REFERENCE_10);
-								}
-								else
-								{
-									smm.Next(Cmd.REFERENCE_INSPRUN_10);
-								}
+								
+								smm.Next(Cmd.REFERENCE_INSPRUN_10);
 							}
 						}
 						break;
@@ -2299,19 +2291,8 @@ namespace H_MarsSSD
 					case Cmd.REFERENCE_INSPRUN_10:
 						{
 							if (SM.SHM.GetUseSkipData(USESKIP.TopInspection) == true)
-								G.commInspTop.SendRunStateRequest();
-							else
-							{
-								SM.SHM.SetBitData(BIT.ReferenceRequestTop1, false);
-								SM.SHM.SetBitData(BIT.ReferenceRequestTop2, false);
-							}
-							if (SM.SHM.GetUseSkipData(USESKIP.BtmInspection) == true)
-								G.commInspBtm.SendRunStateRequest();
-							else
-							{
-								SM.SHM.SetBitData(BIT.ReferenceRequestBtm2, false);
-								SM.SHM.SetBitData(BIT.ReferenceRequestBtm1, false);
-							}
+							G.commInspTop.SendRunStateRequest();
+
 							smm.Next(Cmd.REFERENCE_INSPRUN_20);
 						}
 						break;
@@ -2319,16 +2300,6 @@ namespace H_MarsSSD
 					case Cmd.REFERENCE_INSPRUN_20: //상부 검사 run 시작
 						{
 							if (SM.SHM.GetUseSkipData(USESKIP.TopInspection) == false)
-							{
-								smm.Next(Cmd.REFERENCE_INSPRUN_40);
-								break;
-							}
-							if (m_nLaneNo == 1 && SM.SHM.IsBitData(BIT.ReferenceRequestTop1) == false)
-							{
-								smm.Next(Cmd.REFERENCE_INSPRUN_40);
-								break;
-							}
-							if (m_nLaneNo == 2 && SM.SHM.IsBitData(BIT.ReferenceRequestTop2) == false)
 							{
 								smm.Next(Cmd.REFERENCE_INSPRUN_40);
 								break;
@@ -2395,16 +2366,6 @@ namespace H_MarsSSD
 								smm.Next(Cmd.REFERENCE_10);
 								break;
 							}
-							if (m_nLaneNo == 1 && SM.SHM.IsBitData(BIT.ReferenceRequestBtm1) == false)
-							{
-								smm.Next(Cmd.REFERENCE_10);
-								break;
-							}
-							if (m_nLaneNo == 2 && SM.SHM.IsBitData(BIT.ReferenceRequestBtm2) == false)
-							{
-								smm.Next(Cmd.REFERENCE_10);
-								break;
-							}
 
 							CommInsp.RunState state = CommInsp.RunState.Idle;
 							int nret = G.commInspBtm.RcvRunStateReport(ref state);
@@ -2462,69 +2423,17 @@ namespace H_MarsSSD
 
 					case Cmd.REFERENCE_10:
 						{
-							if (m_bReferenceStart == true)
-							{
-								smm.Next(Cmd.REFERENCE_30);
-								break;
-							}
-
-							smm.Next(Cmd.REFERENCE_20); //manual reference Pos
-						}
-						break;
-
-					case Cmd.REFERENCE_20: //manual reference
-						{
-							//interlock check
-							if (G.seqLoadInspPnP.CheckCylUpDown(SenPos.PICKER_UP) == false)
-							{
-								frmMessageBox pMsg = new frmMessageBox(frmMessageBox.teButtons.OK, Language.languageDefault.MB_Warnning, "Please Check Load Insp PnP Up/Down Cylinder Position");
-								pMsg.ShowDialog();
-								smm.Next(Cmd.END);
-							}
-
-							if (G.seqUnloadInspPnP.CheckCylUpDown(SenPos.PICKER_UP) == false)
-							{
-								frmMessageBox pMsg = new frmMessageBox(frmMessageBox.teButtons.OK, Language.languageDefault.MB_Warnning, "Please Check Unload Insp PnP Up/Down Cylinder Position");
-								pMsg.ShowDialog();
-								smm.Next(Cmd.END);
-							}
-
-							if (arrMt[Axis.Z].IsRdy((int)PosZ.READY) == false)
-							{
-								arrMt[Axis.Z].MoveIndex((int)PosZ.READY);
-								break;
-							}
-
-							if (arrMt[Axis.Y].IsRdy((int)PosY.REFERENCE) == false)
-							{
-								InterlockCheckMove(PosY.REFERENCE);
-								break;
-							}
-
-							smm.Next(Cmd.END);
-						}
-						break;
-
-					case Cmd.REFERENCE_30:
-						{
 							//해당 하는 카메라 체크,
 							//해당 bit false 처리
-							if (m_bReferenceManual == true)
+							if (m_nPartNo == 0 || m_nPartNo == 1)
 							{
-								if (m_nPartNo == 0 || m_nPartNo == 1)
-								{
-									m_nCamera = m_nPartNo;
-									smm.Next(Cmd.REFERENCE_40);
-								}
-								else
-								{
-									smm.Next(Cmd.END);
-									break;
-								}
+								m_nCamera = m_nPartNo;
+								smm.Next(Cmd.REFERENCE_40);
 							}
 							else
 							{
-								//m_bReferenceManual, 메뉴얼이 아닐 때
+								smm.Next(Cmd.END);
+								break;
 							}
 						}
 						break;
@@ -2549,12 +2458,6 @@ namespace H_MarsSSD
 							{
 								case 0: G.commInspTop.SendReferenceStart(m_nHead); break;
 								case 1: G.commInspBtm.SendReferenceStart(m_nHead); break;
-								case 2:
-									{
-										G.commInspTop.SendReferenceStart(m_nHead);
-										G.commInspBtm.SendReferenceStart(m_nHead);
-									}
-									break;
 								default:
 									break;
 							}
@@ -2568,12 +2471,6 @@ namespace H_MarsSSD
 							{
 								case 0: G.commInspTop.SendInspStateRequest(); break;
 								case 1: G.commInspBtm.SendInspStateRequest(); break;
-								case 2:
-									{
-										G.commInspTop.SendInspStateRequest();
-										G.commInspBtm.SendInspStateRequest();
-									}
-									break;
 								default:
 									break;
 							}
@@ -2657,12 +2554,6 @@ namespace H_MarsSSD
 							{
 								case 0: G.commInspTop.SendInspStateRequest(); break;
 								case 1: G.commInspBtm.SendInspStateRequest(); break;
-								case 2:
-									{
-										G.commInspTop.SendInspStateRequest();
-										G.commInspBtm.SendInspStateRequest();
-									}
-									break;
 								default:
 									break;
 							}

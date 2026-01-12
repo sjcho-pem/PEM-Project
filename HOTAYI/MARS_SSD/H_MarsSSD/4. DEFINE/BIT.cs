@@ -58,10 +58,10 @@ namespace H_MarsSSD
 		TrayCleanUpSafety = 48,
 
         // CH-04
-        ReferenceRequestTop1 = 64,
-        ReferenceRequestTop2,
-        ReferenceRequestBtm1,
-        ReferenceRequestBtm2,
+        //ReferenceRequestTop1 = 64,
+        //ReferenceRequestTop2,
+        //ReferenceRequestBtm1,
+        //ReferenceRequestBtm2,
 
         // CH-05
         NewDay = 80,

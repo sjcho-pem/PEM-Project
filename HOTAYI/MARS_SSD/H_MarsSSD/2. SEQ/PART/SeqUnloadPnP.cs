@@ -1657,6 +1657,7 @@ namespace H_MarsSSD
 					info_t.ProdInfo[nTrayPocketNo].TrayRow = nTrayPocketNo / info_t.ColCnt;
 					info_t.ProdInfo[nTrayPocketNo].TrayID = info_t.TrayID;
 					info_t.ProdInfo[nTrayPocketNo].KeyValue = info_t.KeyValue;
+					info_t.ProdInfo[nTrayPocketNo].HandlingStatus = (int)ProdHandlingStatus.Normal;
 
 					SM.FMT[flow].SetInfo(info_t);
 					GLog.Add(string.Format($"Prod Flow {FlowPart.ULDPnP} -> {FlowTray.ULDTable1 + nTableNo} - {nPickerNo} . ID = {info_t.ProdInfo[nTrayPocketNo].ProdID}"));
@@ -2543,64 +2544,37 @@ namespace H_MarsSSD
 					case Cmd.PICK_REJECT_60:
 						{
                             if (G.seqRejectBuffer.IsPnPReady() == false) break;
-							
-							arrMt[Axis.X].MoveABS(m_nAbsPosX, (int)PosX.REJECT_PICK_FIRST);
-							arrMt[Axis.Y].MoveABS(m_nAbsPosY, (int)PosY.REJECT_PICK_FIRST);
-							arrMt[Axis.W].MoveIndex((int)PosW.TABLE);							
 
-                            if (G.seqRejectBuffer.AirVibRequest()) smm.Next(Cmd.PICK_REJECT_VIBRATE1);
-                            else smm.Next(Cmd.PICK_REJECT_70);
+							if (arrMt[Axis.X].IsRdyPos(m_nAbsPosX) == false ||
+								arrMt[Axis.Y].IsRdyPos(m_nAbsPosY) == false ||
+								arrMt[Axis.W].IsRdy((int)PosW.TABLE) == false)
+							{
+								arrMt[Axis.X].MoveABS(m_nAbsPosX, (int)PosX.REJECT_PICK_FIRST);
+								arrMt[Axis.Y].MoveABS(m_nAbsPosY, (int)PosY.REJECT_PICK_FIRST);
+								arrMt[Axis.W].MoveIndex((int)PosW.TABLE);
+								break;
+							}
+
+							if (SM.FMT[FlowTray.Reject].IsAlignDone(m_nProdCol + m_nProdRow * SM.FMT[FlowTray.Reject].GetInfo().ColCnt) == false)
+							{
+								if (G.seqRejectBuffer.IsReady == true)
+									G.seqRejectBuffer.AlignStart();
+							}
+
+							smm.Next(Cmd.PICK_REJECT_70);
 						}
 						break;
-
-                    case Cmd.PICK_REJECT_VIBRATE1:
-                        {
-                            G.seqRejectBuffer.AirVibrate(true);
-                            if (smm.Delayms(NDm.Read(eNDM.AirVibrateTime)) == false) break;
-
-                            if (arrMt[Axis.X].IsRdyPos(m_nAbsPosX) == false ||
-                                arrMt[Axis.Y].IsRdyPos(m_nAbsPosY) == false ||
-                                arrMt[Axis.W].IsRdy((int)PosW.TABLE) == false)
-                            {
-                                arrMt[Axis.X].MoveABS(m_nAbsPosX, (int)PosX.REJECT_PICK_FIRST);
-                                arrMt[Axis.Y].MoveABS(m_nAbsPosY, (int)PosY.REJECT_PICK_FIRST);
-                                arrMt[Axis.W].MoveIndex((int)PosW.TABLE);
-                                break;
-                            }
-                            smm.Next(Cmd.PICK_REJECT_VIBRATE2);
-                        }
-                        break;
-
-                    case Cmd.PICK_REJECT_VIBRATE2:
-                        {
-                            G.seqRejectBuffer.AirVibrate(false);
-                            if (smm.Delayms(500) == false) break;
-
-                            smm.Next(Cmd.PICK_REJECT_70);
-                        }
-                        break;
 
 
                     case Cmd.PICK_REJECT_70:
 						{
-                            if (arrMt[Axis.X].IsRdyPos(m_nAbsPosX) == false ||
-                                arrMt[Axis.Y].IsRdyPos(m_nAbsPosY) == false ||
-                                arrMt[Axis.W].IsRdy((int)PosW.TABLE) == false)
-                            {
-                                arrMt[Axis.X].MoveABS(m_nAbsPosX, (int)PosX.REJECT_PICK_FIRST);
-                                arrMt[Axis.Y].MoveABS(m_nAbsPosY, (int)PosY.REJECT_PICK_FIRST);
-                                arrMt[Axis.W].MoveIndex((int)PosW.TABLE);
-                                break;
-                            }
-
-                            if (arrMt[Axis.Z].IsRdy((int)PosZ.REJECT_PICK) == false ||
-								CheckCylUpDown(SenPos.PICKER_DOWN, m_ActPicker) == false)
+							if (arrMt[Axis.Z].IsRdy((int)PosZ.REJECT_PICK) == false ||
+							CheckCylUpDown(SenPos.PICKER_DOWN, m_ActPicker) == false)
 							{
 								arrMt[Axis.Z].MoveIndex((int)PosZ.REJECT_PICK);
 								RunCylUpDown(SenPos.PICKER_DOWN, m_ActPicker);
 								break;
 							}
-
 
 							smm.Next(Cmd.PICK_REJECT_80);
 						}
@@ -2684,7 +2658,6 @@ namespace H_MarsSSD
 								break;
 							}
 
-                            G.seqRejectBuffer.AirVibRequest();
                             smm.Next(Cmd.END);
 						}
 						break;
@@ -3706,6 +3679,35 @@ namespace H_MarsSSD
 								G.seqUnloadTrayTable2.IsUpState() == false)
 							{
 								smm.Next(Cmd.END);
+								break;
+							}
+
+							if (SM.FMT[m_SortFlow].IsAlignDone() == false)
+							{
+								switch (m_SortFlow)
+								{
+									case FlowTray.ULDTable1:
+
+										if (G.seqUnloadTrayTable1.IsReady == true)
+										{
+											G.seqUnloadTrayTable1.AlignStart();
+										}
+										break;
+									case FlowTray.ULDTable2:
+
+										if (G.seqUnloadTrayTable2.IsReady == true)
+										{
+											G.seqUnloadTrayTable2.AlignStart();
+										}
+										break;
+									case FlowTray.Reject:
+
+										if (G.seqRejectBuffer.IsReady == true)
+										{
+											G.seqRejectBuffer.AlignStart();
+										}
+										break;
+								}
 								break;
 							}
 

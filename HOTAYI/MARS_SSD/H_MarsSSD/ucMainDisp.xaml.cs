@@ -1621,6 +1621,7 @@ namespace H_MarsSSD
 									info.SerialNumber		= string.Empty;
 									info.TrayBarcode		= str_tray_Barcode;
 									info.PickStatus			= (int)ProdPickStatus.Normal;
+									info.HandlingStatus		= (int)ProdHandlingStatus.Normal;
 								}
 								
 								SM.FMT[flow].SetProd(e.Index, info);

@@ -59,7 +59,7 @@ namespace H_MarsSSD
 			RejectDataReportConfrim = 11,
 			VerifyDataReport,
 			VerifyDataReportEnd,
-			ReferencePositionRequest =15,
+			//ReferencePositionRequest =15,
 			TeachingStateReport =16,
 			BoardSignalRequest =17,
 			JobCheckReport,
@@ -440,17 +440,6 @@ namespace H_MarsSSD
 								G.commInspBtm.SendPauseStart(1);
 								G.commInspTop.SendPauseStart(1);
 
-							}
-							break;
-						case RcvCmd.ReferencePositionRequest:
-							{
-								if (int.TryParse(RcvData.strSplitData[0], out int nResult))
-								{
-									if		(RcvData.CmdDir == CmdDir.FromTop && nResult == 0)			SM.SHM.SetBitData(BIT.ReferenceRequestTop1, true);
-									else if (RcvData.CmdDir == CmdDir.FromTop && nResult == 1)			SM.SHM.SetBitData(BIT.ReferenceRequestTop2, true);
-									else if (RcvData.CmdDir == CmdDir.FromBtm && nResult == 0)			SM.SHM.SetBitData(BIT.ReferenceRequestBtm1, true);
-									else if (RcvData.CmdDir == CmdDir.FromBtm && nResult == 1)			SM.SHM.SetBitData(BIT.ReferenceRequestBtm2, true);
-								}
 							}
 							break;
 						case RcvCmd.BoardSignalRequest :

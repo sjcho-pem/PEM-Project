@@ -394,10 +394,6 @@ namespace H_MarsSSD
 							}
 
 							SM.SHM.XmlModelUpdate();
-							SM.SHM.SetBitData(BIT.ReferenceRequestTop1, false);
-							SM.SHM.SetBitData(BIT.ReferenceRequestTop2, false);
-							SM.SHM.SetBitData(BIT.ReferenceRequestBtm1, false);
-							SM.SHM.SetBitData(BIT.ReferenceRequestBtm2, false);
 
 							smm.Next(Cmd.FTV_START_10);
 						}

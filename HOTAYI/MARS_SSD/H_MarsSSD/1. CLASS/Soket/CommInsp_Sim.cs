@@ -300,17 +300,6 @@ namespace H_MarsSSD
 								SendPauseStart(1);
 							}
 							break;
-						case CommInsp.RcvCmd.ReferencePositionRequest:
-							{
-								if (int.TryParse(RcvData.strSplitData[0], out int nResult))
-								{
-									if		(CmdDir == CommInsp.CmdDir.FromTop && nResult == 0)			SM.SHM.SetBitData(BIT.ReferenceRequestTop1, true);
-									else if (CmdDir == CommInsp.CmdDir.FromTop && nResult == 1)			SM.SHM.SetBitData(BIT.ReferenceRequestTop2, true);
-									else if (CmdDir == CommInsp.CmdDir.FromBtm && nResult == 0)			SM.SHM.SetBitData(BIT.ReferenceRequestBtm1, true);
-									else if (CmdDir == CommInsp.CmdDir.FromBtm && nResult == 1)			SM.SHM.SetBitData(BIT.ReferenceRequestBtm2, true);
-								}
-							}
-							break;
 						case CommInsp.RcvCmd.BoardSignalRequest :
 							{ 
 								if (int.TryParse(RcvData.strSplitData[0], out int nLane) && int.TryParse(RcvData.strSplitData[1], out int nState))

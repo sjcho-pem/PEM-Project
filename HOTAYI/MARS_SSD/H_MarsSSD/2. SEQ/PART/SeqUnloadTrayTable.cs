@@ -192,7 +192,7 @@ namespace H_MarsSSD
 				m_smmDown		= new SMM<Cmd>(Cmd.START, EnumHelper.GetDescription(SeqID.UNLOADTABLE1_DOWN+m_nTableNo));
 				m_smmGrip		= new SMM<Cmd>(Cmd.START, EnumHelper.GetDescription(SeqID.UNLOADTABLE1_GRIP+m_nTableNo));
 				m_smmRelease	= new SMM<Cmd>(Cmd.START, EnumHelper.GetDescription(SeqID.UNLOADTABLE1_RELEASE+m_nTableNo));
-				m_smmAlign = new SMM<Cmd>(Cmd.START, EnumHelper.GetDescription(SeqID.UNLOADTABLE1_ALIGN + m_nTableNo));
+				m_smmAlign		= new SMM<Cmd>(Cmd.START, EnumHelper.GetDescription(SeqID.UNLOADTABLE1_ALIGN + m_nTableNo));
 
 				lstSMM.Add(m_smmHome);
 				lstSMM.Add(m_smmUp);
@@ -1012,6 +1012,11 @@ namespace H_MarsSSD
 							{
 								arrMt[Axis.GripY].MoveIndex((int)PosGrip.GRIP);
 								arrAct[Act.TrayGripX].SetPos(SenPos.FWD);
+							}
+
+							if (IsAlignReady() == false)
+							{
+								break;
 							}
 
 							smm.Next(Cmd.DOWN_30);

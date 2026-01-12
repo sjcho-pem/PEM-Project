@@ -658,10 +658,6 @@ namespace H_MarsSSD
 							NDm.Write(eNDM.LotEndMode, (int)LotEndMode.Normal);
 							NDm.Write(eNDM.RejectRunMode, (int)RejectRunMode.Normal);
 
-							SM.SHM.SetBitData(BIT.ReferenceRequestBtm1, false);
-							SM.SHM.SetBitData(BIT.ReferenceRequestBtm2, false);
-							SM.SHM.SetBitData(BIT.ReferenceRequestTop1, false);
-							SM.SHM.SetBitData(BIT.ReferenceRequestTop2, false);
 							SM.SHM.SetBitData(BIT.LotLoadStart, false);
 							
 							SM.FMR.FlowClearAll();

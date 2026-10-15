@@ -1,0 +1,12 @@
+/workspace/DataManRefresh.Core/bin/Debug/net8.0/DataManRefresh.Core.deps.json
+/workspace/DataManRefresh.Core/bin/Debug/net8.0/DataManRefresh.Core.dll
+/workspace/DataManRefresh.Core/bin/Debug/net8.0/DataManRefresh.Core.pdb
+/workspace/DataManRefresh.Core/obj/Debug/net8.0/DataManRefresh.Core.GeneratedMSBuildEditorConfig.editorconfig
+/workspace/DataManRefresh.Core/obj/Debug/net8.0/DataManRefresh.Core.AssemblyInfoInputs.cache
+/workspace/DataManRefresh.Core/obj/Debug/net8.0/DataManRefresh.Core.AssemblyInfo.cs
+/workspace/DataManRefresh.Core/obj/Debug/net8.0/DataManRefresh.Core.csproj.CoreCompileInputs.cache
+/workspace/DataManRefresh.Core/obj/Debug/net8.0/DataManRefresh.Core.sourcelink.json
+/workspace/DataManRefresh.Core/obj/Debug/net8.0/DataManRefresh.Core.dll
+/workspace/DataManRefresh.Core/obj/Debug/net8.0/refint/DataManRefresh.Core.dll
+/workspace/DataManRefresh.Core/obj/Debug/net8.0/DataManRefresh.Core.pdb
+/workspace/DataManRefresh.Core/obj/Debug/net8.0/ref/DataManRefresh.Core.dll

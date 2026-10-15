@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "DataManRefresh/1.0.0": {
+        "dependencies": {
+          "DataManRefresh.Core": "1.0.0"
+        },
+        "runtime": {
+          "DataManRefresh.dll": {}
+        }
+      },
+      "DataManRefresh.Core/1.0.0": {
+        "runtime": {
+          "DataManRefresh.Core.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DataManRefresh/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DataManRefresh.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
